@@ -90,7 +90,7 @@ color: #2C3F76;
 }
 #second_page_secondbox{
     display: grid;
-   margin-top: 11%;
+   margin-top: 18%;
    margin-left: 9%;
    margin-right: 4%;
    
@@ -105,7 +105,7 @@ height: 160px;
 left: 205px;
 top: 280px;
 
-background: linear-gradient(104.43deg, #F96977 3.15%, #D85B45 50.29%, #FF7434 117.72%);
+background: linear-gradient(104.43deg, #51459D 3.15%, #887DCB 117.72%);;
 border-radius: 8px
 }
 .two{
@@ -115,7 +115,7 @@ height: 160px;
 
 top: 280px;
 
-background: linear-gradient(104.43deg, #F96977 3.15%, #D85B45 50.29%, #FF7434 117.72%);
+background: linear-gradient(104.43deg, #51459D 3.15%, #887DCB 117.72%);;
 border-radius: 8px;
 
 }
@@ -127,7 +127,7 @@ left: 730px;
 margin-top: 7%;
 
 
-background: linear-gradient(104.43deg, #F96977 3.15%, #D85B45 50.29%, #FF7434 117.72%);
+background: linear-gradient(104.43deg, #51459D 3.15%, #887DCB 117.72%);;
 border-radius: 8px;
 
 }
@@ -138,7 +138,7 @@ height: 160px;
 left: 730px;
 margin-top: 7%;
 
-background: linear-gradient(104.43deg, #F96977 3.15%, #D85B45 50.29%, #FF7434 117.72%);
+background: linear-gradient(104.43deg, #51459D 3.15%, #887DCB 117.72%);;
 border-radius: 8px;
 
 }

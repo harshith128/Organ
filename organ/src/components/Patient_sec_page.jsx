@@ -1,11 +1,9 @@
-import "./second_page.css"
+import "./patient_sec_page.css"
 import {Second_Component} from "./Second_Component"
-import Navbar from './components/Navbar';
 
-function Second_Page(){
+function Patient_Second_Page(){
     return (
         <div>
-            <Navbar/>
         <Second_Component/>
         <br></br>
         <div>
@@ -14,14 +12,14 @@ function Second_Page(){
                 <div className="inside_box">
                    
                     <img src="Rectangle 226.svg" className="img"></img>
-                    <p className="inside_box1">New Patient Registration</p>
+                    <p className="inside_box1">Brain Death Registration</p>
                 </div>
 
             </div>
             <div  className="two">
             <div className="inside_box2">
                     <img src="Rectangle 228.svg"></img>
-                    <p className="inside_box1">Check Status</p>
+                    <p className="inside_box1">View Report</p>
                 </div>
 
 
@@ -29,7 +27,7 @@ function Second_Page(){
             <div className="three">
             <div className="inside_box">
                     <img src="Rectangle 226.svg"></img>
-                    <p className="inside_box1">Update Patient Info</p>
+                    <p className="inside_box1">Update Information</p>
                 </div>
 
             </div>
@@ -49,4 +47,4 @@ function Second_Page(){
 
     )
 }
-export {Second_Page}
+export {Patient_Second_Page}
