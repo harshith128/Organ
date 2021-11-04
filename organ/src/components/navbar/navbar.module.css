@@ -2,14 +2,14 @@
    position: fixed;
    width: 100%;
    height: 56px;
-   left: 100px;
-   top: 54px;
+   left: 0px;
+   top: 0px;
    background: #FFFFFF;
 }
-.logo{
+.navbar_logo{
     position: absolute;
-    left: 0%;
-    right: 12%;
+    left: 5%;
+    right: 2%;
     top: 32.56%;
     bottom: 0%;
     color: #C50005;
@@ -20,6 +20,21 @@
     font-size: 20px;
     line-height: 113%;
 }
+.navbar_plus{
+    position: absolute;
+    left: 4.6%;
+    right: 0%;
+    top: 10%;
+    bottom: 10.67%;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 28px;
+
+    color: #E21217;
+}
 .navflex{
     display: flex;
     flex-direction: row;
@@ -27,8 +42,8 @@
     padding: 0px;
 
     position: absolute;
-    left: 41.21%;
-    right: 15.37%;
+    left: 58%;
+    right: 0%;
     top: 30.42%;
     bottom: 32.08%;
 }
@@ -105,11 +120,11 @@
 
 }
 .btnpledge{
-    position: absolute;
-    left: 70%;
+    /* position: absolute;
+    left: 85%;
     right: 4.44%;
     top: 20%;
-    bottom: 20%;
+    bottom: 20%; */
     color: #FFFFFF;
  
     background: #ED2025;
@@ -142,4 +157,6 @@
     bottom: 0%;
 
     border: 1px solid #36487D;
+
 }
+

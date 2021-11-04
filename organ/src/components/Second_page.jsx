@@ -1,6 +1,6 @@
 import "./second_page.css"
 import {Second_Component} from "./Second_Component"
-import Navbar from './components/Navbar';
+import Navbar from './navbar/Navbar';
 
 function Second_Page(){
     return (
