@@ -1,5 +1,8 @@
 import "./thanks_hospital.css"
-import Navbar from '../components/Navbar';
+import Navbar from './navbar/Navbar'
+
+import Footer from './footer/Footer'
+
 
 function Thanks_page(){
 
@@ -15,6 +18,7 @@ function Thanks_page(){
                 <p className="p4"> ap**o@gmail.com</p>
                 <button className="b1"> Click to Login</button>
             </div>
+            <Footer/>
 
         </div>
     )

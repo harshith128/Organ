@@ -1,6 +1,6 @@
 
 #login_main{
-    margin-top: 13%;
+    margin-top: 10%;
 
     width: 70%;
     margin-left: 15%;
@@ -73,7 +73,7 @@ margin-top: 0px;
 }
 .login_btn{
     width:100%;
-    background: #17295E;
+    background:#17295E;
 border-radius: 8px;
 height: 50px;
 
@@ -89,11 +89,25 @@ text-align: center;
 color: #FFFFFF;
 
 }
+
+.login_btn:hover{
+    cursor: pointer;
+     
+}
 .reg_btn{
     border:none;
     background-color: transparent;
     color: #545454;
     text-decoration: underline;
+}
+.reg_btn:hover{
+    cursor: pointer;
+    text-decoration: underline 2px;
+    zoom: normal;
+}
+.login_btn:disabled{
+    background-color:#545454 ;
+    cursor: not-allowed;
 }
 .last{
     display: flex;
