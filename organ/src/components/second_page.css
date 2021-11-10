@@ -3,11 +3,14 @@ border-bottom: 1px solid #91ADFF;
 margin: auto;
 
 
-position: absolute;
-width: 1240px;
+
+width: 90%;
+
 height: 70px;
 left: 60px;
-top: 140px;
+margin-top: 5%;
+margin-left: 5%;
+margin-right: 5%;
 
 background: #F9FAFF;
 

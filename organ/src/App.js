@@ -7,6 +7,7 @@ import { Second_Page, Second_page } from './components/Second_page';
 import{Thanks_page} from "./components/Thanks_Hospital"
 import{Thanks_Patient_page, Thanks_Patient_Page} from "./components/Thanks_patient"
 import{Login} from "./components/Login"
+import{Doner_details}from "./components/DonerDetails"
 
 
 
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path="/login" exact>
            <Login />
+        </Route>
+        <Route path="/d_d" exact>
+           <Doner_details />
         </Route>
          
         </Switch>  
