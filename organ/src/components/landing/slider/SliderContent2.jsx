@@ -10,7 +10,7 @@ function SliderContent1({ activeIndex, sliderImage }) {
           >
               
               <div className="slide-content-grid">
-                  <div className="slide-content-head">Real Stories</div>
+                  <div className="slide-content-head">Awards & Appriciations</div>
                   <div className="slide-title">{slide.title}</div>
                   <div className="slide-text">{slide.description}</div>
               </div>

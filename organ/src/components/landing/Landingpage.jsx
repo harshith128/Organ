@@ -6,7 +6,7 @@ import Footer from '../footer/Footer'
 
 import styles from './landingpage.module.css'
 import Heros from './Heros'
-// import Video from './Video'
+
 import Slider from './slider/Slider'
 import Articles from './Articles'
 
@@ -16,7 +16,7 @@ function Landingpage() {
         <div>
             <Navbar />
             <div className={styles.land_video}>
-               {/* <Video /> */}
+               <Slider val="3"/>
             </div>
             <div className={styles.land_activity}>
                 <div>Recent Activities</div>
@@ -28,7 +28,7 @@ function Landingpage() {
                 <Activities image="landing_activity3.png" content="A group of 10 first year students pursuing their Bachelors in Social Work..." /> 
             </div>
             <div>
-                <Slider />
+                <Slider val="1"/>
             </div>
             <div className={styles.land_activity}>
                 <div>Salute Our Heros</div>
@@ -38,6 +38,9 @@ function Landingpage() {
                 <Heros image="landing_veerara.png" head="Mr. Veeraragavan" cat="Liver Donor - 45 Years" content="Massa morbi amet quis turpis mattis urna adipiscing nibh donec...." />
                 <Heros image="landing_bhagya.png" head="Mrs. Bhagya Laxmi" cat="Heart Donor - 67  Years" content="Massa morbi amet quis turpis mattis urna adipiscing nibh donec...." />
                 <Heros image="landing_veerara.png"head="Mr. Veeraragavan" cat="Liver Donor - 45 Years" content="Massa morbi amet quis turpis mattis urna adipiscing nibh donec...."  /> 
+            </div>
+            <div>
+                <Slider val="2" />
             </div>
             <div className={styles.land_activity}>
                 <div>Latest Articles</div>
