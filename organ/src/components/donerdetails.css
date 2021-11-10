@@ -1,0 +1,102 @@
+.ddmain{
+    width:90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 15px;
+    
+}
+#head{
+    background-color: #091B73;
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 0px;
+    height: 40px;
+    font-weight: 600;
+    padding-top: 5px;
+    text-align: center;
+    
+    
+}
+.form_div{
+    margin-top: 4%;
+    display: grid;
+    grid-template-columns: 49% 49%;
+   
+}
+.f1{
+    width:80%;
+    margin-left: 8%;
+    margin-right: 3%;
+    height: 37.5pt;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 1%;
+    margin-bottom: 5%;
+   border-bottom: 1px solid #DAE0FF;
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   color: #17295E
+
+    
+}
+.f2{
+    width: 80%;
+    margin-left: 8%;
+    font-size: 1.25rem;
+    color: #596896;
+    margin-top: 10px;
+}
+.f3{
+    background: #E3E8FF;
+    width:80%;
+    margin-left: 8%;
+    margin-right: 3%;
+    height: 37.5pt;
+    font-size: 1.25rem;
+    
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 1%;
+    margin-bottom: 5%;
+   border-bottom: 1px solid #DAE0FF;
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   color: #17295E
+}
+.f4{
+    margin-left: 8%;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    margin-right: .5%;
+}
+.nsb1{
+    width: 26%;
+    margin-left: 37%;
+    margin-right: 37%;
+    height: 50pt;
+    background-color: 
+    #43517B;
+    color: white;
+    font-size: 1.625rem;
+    margin-top: 5%;
+    border-radius: 8px;
+    
+}
+.nsb1:hover{
+    cursor: pointer;
+}
+.nsb1:disabled{
+    cursor: not-allowed;
+    background-color: #596896;
+}
+.f5{
+    font-size: 1.25rem;
+    color:#596896
+    
+}
+.f4::selection{
+    color: #17295E;
+}

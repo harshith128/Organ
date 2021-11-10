@@ -1,0 +1,132 @@
+
+#login_main{
+    margin-top: 10%;
+
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 70%;
+    display: grid;
+    grid-template-columns: 49% 49%;
+}
+    
+.left_div{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 20%;
+    font-size: 1.125rem;
+    color: black;
+    font-weight: 500;
+
+}
+.right_div{
+    margin-top: 10%;
+    width:70%;
+    margin-left: 15%;
+}
+.wel{
+   
+font-family: Poppins;
+font-style: normal;
+
+font-weight: 500;
+font-size: 1.625rem;
+line-height: 39px;
+/* identical to box height */
+
+text-align: center;
+
+color: #17295E;
+}
+.input{
+    width: 100%;
+    border: 0.8px solid #17295E;
+    font-size:medium;
+box-sizing: border-box;
+border-radius: 8px;
+height: 50px;
+margin-bottom: 0px;
+}
+.lab{
+    font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 1.125rem;
+line-height: 27px;
+margin-top: 10%;
+/* identical to box height */
+
+
+color: #545454;
+}
+.forgot{
+    float: right;
+    font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: .75rem;
+line-height: 18px;
+/* identical to box height */
+
+
+color: #17295E;
+margin-top: 0px;
+}
+.login_btn{
+    width:100%;
+    background:#17295E;
+border-radius: 8px;
+height: 50px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 1.25rem;
+line-height: 30px;
+/* identical to box height */
+
+text-align: center;
+
+color: #FFFFFF;
+
+}
+
+.login_btn:hover{
+    cursor: pointer;
+     
+}
+.reg_btn{
+    border:none;
+    background-color: transparent;
+    color: #545454;
+    text-decoration: underline;
+}
+.reg_btn:hover{
+    cursor: pointer;
+    text-decoration: underline 2px;
+    zoom: normal;
+}
+.login_btn:disabled{
+    background-color:#545454 ;
+    cursor: not-allowed;
+}
+.last{
+    display: flex;
+   margin-left: 10%;
+   margin-right: 10%;
+   font-size: 14px;
+   
+color: #545454;
+}
+.check{
+    font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: .875rem;
+line-height: 18px;
+/* identical to box height */
+
+
+color: #545454;
+
+}
+

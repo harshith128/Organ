@@ -2,11 +2,21 @@
 import './App.css';
 import React from 'react';
 import {Route,Switch} from 'react-router-dom'
+
 import Landingpage from './components/landing/Landingpage';
-import { Second_Page} from './components/Second_page';
+
+
+import { Second_Page, Second_page } from './components/Second_page';
+import{Thanks_page} from "./components/Thanks_Hospital"
+import{Thanks_Patient_page, Thanks_Patient_Page} from "./components/Thanks_patient"
+import{Login} from "./components/Login"
+import{Doner_details}from "./components/DonerDetails"
+
+
 
 
 function App() {
+ 
   return (
     <div>
       <Switch>
@@ -16,8 +26,20 @@ function App() {
         <Route path="/registration" exact>
            <Second_Page />
          </Route>
-        </Switch>
-        
+         <Route path="/thanks_H" exact>
+           <Thanks_page />
+         </Route>
+         <Route path="/thanks_P" exact>
+           <Thanks_Patient_page />
+        </Route>
+        <Route path="/login" exact>
+           <Login />
+        </Route>
+        <Route path="/d_d" exact>
+           <Doner_details />
+        </Route>
+         
+        </Switch>  
     </div>
   );
 }

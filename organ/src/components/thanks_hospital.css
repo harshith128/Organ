@@ -1,0 +1,54 @@
+.thanks_main{
+    margin-top: 15%;
+    width:60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+   
+}
+.p1{
+    color: #17295E;
+    font-size: 1.875rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+}
+.p2{
+    font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 1.5rem;
+color: #2C3F76;
+
+}
+.p3,.p4{
+    color: #2C3F76;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.875rem;
+   
+}
+.b1{
+   background-color:#17295E;
+   color: white;
+    font-size:  1.625em; 
+    width: 40%;
+    height: 50px;
+    border-radius: 8px;
+}
+.p5{
+    color: #17295E;
+    font-size: 1.25rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+
+}
+.p5:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+body{
+    background-color: #F9FAFF;
+}
