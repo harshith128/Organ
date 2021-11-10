@@ -29,9 +29,7 @@ background-color: #091B73;
  ;
 }
 .footer_grid .footer_plus_logo{
-    position: absolute;
-    left: 9.3%;
-    top: 13.1vw;
+    margin-left: -18%;
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;

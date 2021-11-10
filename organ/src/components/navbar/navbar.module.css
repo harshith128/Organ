@@ -5,6 +5,7 @@
    left: 0px;
    top: 0px;
    background: #FFFFFF;
+   z-index: 1000;
 }
 .navbar_logo{
     position: absolute;
@@ -42,8 +43,8 @@
     padding: 0px;
 
     position: absolute;
-    left: 58%;
-    right: 0%;
+   left: 56.5%;
+   right: 1.5%;
     top: 30.42%;
     bottom: 32.08%;
 }
@@ -125,7 +126,17 @@
     right: 4.44%;
     top: 20%;
     bottom: 20%; */
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    /* identical to box height */
+
+    text-align: center;
+
     color: #FFFFFF;
+    
  
     background: #ED2025;
     border-radius: 8px;

@@ -1,0 +1,22 @@
+.video-js {
+    
+    width: 90%;
+    height: 30vw;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-right: 5%;
+    border-radius: 12px;
+}
+
+.vjs-poster{
+    border-radius: 12px;
+}
+
+.video-js .vjs-tech{
+     display: block;
+     width: 130%;
+     height: 25vw;
+     /* margin-left: auto;
+     margin-top: auto; */
+     border-radius: 12px;
+}

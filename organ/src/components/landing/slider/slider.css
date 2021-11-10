@@ -1,0 +1,157 @@
+:root {
+    --heights: 50vh;
+    --widths: 100%;
+}
+
+.slider-container {
+    height: 20 vw;
+    width: 90%;
+    position: relative;
+    margin: auto;
+    margin-top: 2%;
+    /* overflow: hidden; */
+}
+
+.active {
+    display: grid;
+    grid-template-columns: 55% 45% ;
+
+}
+.slide-content-head{
+   position: absolute;
+   width: 153px;
+   height: 29px;
+   left: 5%;
+   top: 7%;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 111.3%;
+    /* identical to box height, or 29px */
+
+
+    color: #17295E;
+}
+.slide-title{
+   position: absolute;
+       left: 5%;
+       top: 20%;
+   
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 111.3%;
+    /* identical to box height, or 29px */
+
+
+    color: #40457A;
+}
+.slide-text{
+    position: absolute;
+    width: 22%;
+    height: 66px;
+    left: 5%;
+    top: 35%;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 138.3%;
+    /* or 22px */
+
+
+    color: #40457A;
+
+}
+.inactive {
+    display: none;
+}
+
+.slides {
+    height: 20vw;
+    width: 90%;
+    position: relative;
+}
+
+.slide-image {
+    position: absolute;
+   width: 20%;
+   height: 17 vw;
+   left: 76%;
+   top: 10%;
+   
+
+}
+
+/* .slide-title,
+.slide-text {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    z-index: 10;
+} */
+
+/* .slide-text {
+    top: 65%;
+    font-size: 2rem;
+} */
+
+.prev,
+.next {
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 1rem;
+    margin-top: -3rem;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.prev:hover,
+.next:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.5s ease-in;
+}
+
+.next {
+    right: 0;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.all-dots {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    top: 85%;
+    justify-content: center;
+    z-index: 200;
+}
+
+.dot {
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0px 3px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.active-dot,
+.dot:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}

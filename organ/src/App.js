@@ -2,8 +2,8 @@
 import './App.css';
 import React from 'react';
 import {Route,Switch} from 'react-router-dom'
-import Landingpage from './components/Landingpage';
-import { Second_Page, Second_page } from './components/Second_page';
+import Landingpage from './components/landing/Landingpage';
+import { Second_Page} from './components/Second_page';
 
 
 function App() {
