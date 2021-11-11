@@ -108,8 +108,6 @@ function Doner_details(){
                         <input type="file" className="f3" name=" certificate" ref={ref} onChange={handlefileChange}/>
                         <label className="f2">Eligible Blood Group for Transplant</label>
                         <br></br>
-
-
                     </div>
                    
                 </div>

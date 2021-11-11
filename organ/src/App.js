@@ -13,6 +13,8 @@ import{Login} from "./components/Login"
 import{Doner_details}from "./components/DonerDetails"
 import{Organ_Wish_To_Donate} from "./components/OrganWishToDonate"
 import{Confirm_BD_Details} from "./components/Confirm_BD_Details"
+import{Patient_Details} from "./components/Enter_Patient_Details"
+import{Confirm_Patient_Details} from "./components/Confirm_Patient_Details"
 
 
 
@@ -46,7 +48,12 @@ function App() {
         <Route path="/C_BD_D" exact>
            <Confirm_BD_Details />
         </Route>
-         
+        <Route path="/p_d" exact>
+           <Patient_Details />
+        </Route>
+        <Route path="/c_p_d" exact>
+           <Confirm_Patient_Details />
+        </Route>
         </Switch>  
     </div>
   );
