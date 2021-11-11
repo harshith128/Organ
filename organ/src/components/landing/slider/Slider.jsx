@@ -13,7 +13,7 @@ const len = SliderImage.length - 1;
 
 function Slider(props) {
     const [activeIndex, setActiveIndex] = useState(0);
-    
+  const [activeVideoIndex, setActiveVideoIndex] = useState(0);
     useEffect(() => {
           const interval = setInterval(() => {
       setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
@@ -65,22 +65,23 @@ function Slider(props) {
     }
         
     else if (props.val === "3") {
-         clearInterval()
+         
         return (
-          <div className="slider-container">
-           <Video activeIndex={activeIndex} sliderImage={SliderVideo} />
+          <div className="slider-container-video">
+           <Video activeIndex={activeVideoIndex} sliderImage={SliderVideo} />
            <Arrows
              prevSlide={() =>
-            setActiveIndex(activeIndex < 1 ? len : activeIndex - 1)
+                setActiveVideoIndex(activeVideoIndex < 1 ? len : activeVideoIndex - 1)
+                
            }
           nextSlide={() =>
-          setActiveIndex(activeIndex === len ? 0 : activeIndex + 1)
+          setActiveVideoIndex(activeVideoIndex === len ? 0 : activeVideoIndex + 1)
         }
       />
       <Dots
-        activeIndex={activeIndex}
+        activeVideoIndex={activeVideoIndex}
         sliderImage={SliderVideo}
-        onclick={(activeIndex) => setActiveIndex(activeIndex)}
+        onclick={(activeVideoIndex) => setActiveVideoIndex(activeVideoIndex)}
       />
     </div>
    );
