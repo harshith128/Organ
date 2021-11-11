@@ -11,12 +11,12 @@ background-color: #091B73;
 }
 .footer_grid{
     display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-columns: 15% 20% 20% 20%;
     grid-template-rows: 40% 40%;
-    grid-gap: 10px;
+    grid-gap: 5%;
     padding: 1px;
-    margin-top: 10%;
-    margin-left: 10%;
+    margin-top: 4%;
+    margin-left: 5%;
 }
 .footer_grid .footer_head{
     margin-top: 20%;
@@ -29,9 +29,7 @@ background-color: #091B73;
  ;
 }
 .footer_grid .footer_plus_logo{
-    position: absolute;
-    left: 9.3%;
-    top: 13.1vw;
+    margin-left: -24%;
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
@@ -41,11 +39,13 @@ background-color: #091B73;
     color: #FFFFFF;
 }
 .footer_sub_deta{
+    
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
+    margin-top: 4%;
     font-size: 0.875rem;
-    line-height: 26px;
+    line-height: 175%;
     color: #FFFFFF;
 }
 .footer_sub_grid1{
