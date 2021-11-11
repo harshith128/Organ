@@ -1,13 +1,18 @@
-:root {
-    --heights: 50vh;
-    --widths: 100%;
-}
 
 .slider-container {
     height: 20 vw;
     width: 90%;
     position: relative;
     margin: auto;
+    margin-top: 2%;
+    background-color: #ffffff;
+    /* overflow: hidden; */
+}
+.slider-container-video {
+    height: 30 vw;
+    width: 95%;
+    position: relative;
+    margin-left: 5%;
     margin-top: 2%;
     background-color: #ffffff;
     /* overflow: hidden; */
@@ -137,7 +142,7 @@
     height: 100%;
     position: absolute;
     display: flex;
-    top: 85%;
+    top: 100%;
     justify-content: center;
     z-index: 200;
 }

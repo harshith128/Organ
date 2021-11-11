@@ -21,3 +21,14 @@
      margin-top: auto; */
      border-radius: 12px;
 }
+.slidesVideo{
+    width: 100%;
+    margin-left: 8%;
+
+}
+.slidesVideo .active_video{
+     width: 90%;
+}
+.inactive_video {
+    display: none;
+}

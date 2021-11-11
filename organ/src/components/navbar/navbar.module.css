@@ -126,10 +126,11 @@
     right: 4.44%;
     top: 20%;
     bottom: 20%; */
+    width: 12%;
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.875 rem;
     line-height: 21px;
     /* identical to box height */
 
