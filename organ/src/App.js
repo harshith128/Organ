@@ -8,6 +8,8 @@ import{Thanks_page} from "./components/Thanks_Hospital"
 import{Thanks_Patient_page, Thanks_Patient_Page} from "./components/Thanks_patient"
 import{Login} from "./components/Login"
 import{Doner_details}from "./components/DonerDetails"
+import{Organ_Wish_To_Donate} from "./components/OrganWishToDonate"
+import{Confirm_BD_Details} from "./components/Confirm_BD_Details"
 
 
 
@@ -33,6 +35,12 @@ function App() {
         </Route>
         <Route path="/d_d" exact>
            <Doner_details />
+        </Route>
+        <Route path="/O_W_T_D" exact>
+           <Organ_Wish_To_Donate />
+        </Route>
+        <Route path="/C_BD_D" exact>
+           <Confirm_BD_Details />
         </Route>
          
         </Switch>  

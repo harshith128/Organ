@@ -1,0 +1,38 @@
+.cbdd1{
+    margin-left: 4%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #17295E;
+    margin-bottom: 5%;
+}
+.cbdd2{
+    margin-left: 4%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #596896;
+}
+.cbddbt1{
+   
+    width:13%;
+    text-align: center;
+    color: white;
+    background-color: #17295E;
+    font-size: 1.625rem;
+    padding:17px;
+    border-radius: 8px;
+    margin-left: 36%;
+    margin-right: 4%;
+
+
+}
+.cbddbt2{
+   
+    width:13%;
+    text-align: center;
+    color:#17295E;
+    background-color:white;
+    font-size: 1.625rem;
+    padding:17px;
+    border-radius: 8px;
+
+}

@@ -1,0 +1,56 @@
+#owtdmain{
+    width:80%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+.owtdhead{
+    background-color: #091B73;
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 0px;
+    height: 40px;
+    font-weight: 600;
+    padding-top: 5px;
+    text-align: center;
+    margin-bottom: 4%;
+}
+.owtd1{
+    font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 1.25rem;
+color: #2C3F76;
+margin-left: 10%;
+margin-right: 35%;
+}
+#grid_view{
+    width: 80%;
+    display: grid;
+    grid-template-columns:18% 18% 18% 18% 18% ;
+    gap: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align:center;
+}
+.otwd_img{
+    min-width: 95%;
+    max-width: 95%;
+    min-height: 160px;
+    max-height: 160px;
+}
+.otwd_img:hover{
+    cursor: pointer;
+    
+}
+.owtd2{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #2C3F76;
+    margin-left: 10%;
+    margin-right: 30%;
+    margin-top: 5%;
+
+}
