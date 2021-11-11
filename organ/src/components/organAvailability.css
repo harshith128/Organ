@@ -1,0 +1,19 @@
+
+.thead {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+.thead > * {
+    flex-grow: 1;
+    border: 1px solid black;
+}
+.trow {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+.trow > * {
+    flex-grow: 1;
+    border: 1px solid black;
+}

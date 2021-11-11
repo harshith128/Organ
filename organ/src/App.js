@@ -11,6 +11,7 @@ import{Thanks_page} from "./components/Thanks_Hospital"
 import{Thanks_Patient_page, Thanks_Patient_Page} from "./components/Thanks_patient"
 import{Login} from "./components/Login"
 import{Doner_details}from "./components/DonerDetails"
+import { OrganAvailability } from './components/OrganAvailability';
 
 
 
@@ -38,7 +39,9 @@ function App() {
         <Route path="/d_d" exact>
            <Doner_details />
         </Route>
-         
+         <Route path="/o_a" exact>
+           <OrganAvailability />
+         </Route>
         </Switch>  
     </div>
   );

@@ -6,6 +6,7 @@ const { body, validationResult, check } = require('express-validator');
 const sendMail = require("../utils/sendMail");
 const BrainDeath = require("../models/brainDeath.model");
 const Patient = require("../models/patient.model");
+const Hospital = require("../models/hospitalRegister.model");
 
 
 router.post("", 
@@ -40,10 +41,13 @@ router.post("",
                 organsAvailable: req.body.organsAvailable
             };
 
+            let hosp = await Hospital.findById({_id:req.body.hospital}).lean().exec();
+            deathDetails.state = hosp.state;
+
             let eligible = req.body.eligible;
             let oga = req.body.organsAvailable;
 
-            // const brainDeath = await BrainDeath.create(deathDetails);
+            const brainDeath = await BrainDeath.create(deathDetails);
 
             let bgs = eligible.map((group) => {
                 return {preferable: group}
@@ -65,7 +69,7 @@ router.post("",
             
             // console.log(req.body.organsAvailable)
 
-            res.status(201).send({ brainDeath:"hello" });
+            res.status(201).send({ brainDeath });
 
         }catch(err) {
 
@@ -75,8 +79,9 @@ router.post("",
 })
 
 router.get("/others", async (req, res) => {
-    console.log(req.query)
-    console.log(req.query.state)
+    const page = +req.query.page || 1;
+    const size = 10;
+    const offset = (page - 1) * size;
 
     let eligible = req.query.blood;
 
@@ -86,15 +91,36 @@ router.get("/others", async (req, res) => {
         eligible = eligible.substr(0, eligible.length-1) + "-"
     }
 
-    const allDeaths = await BrainDeath.find({$and: [{organsAvailable: req.query.organ}, {eligible: eligible}]}).populate("hospital").lean().exec();
-    res.status(200).send({allDeaths})
+    const allDeaths = await BrainDeath.find({$and: [{state: req.query.state, organsAvailable: req.query.organ}, {eligible: eligible}]}).sort({_id:-1}).populate("hospital").lean().exec();
+    const total_pages = Math.ceil((await BrainDeath.find({$and: [{state: req.query.state, organsAvailable: req.query.organ}, {eligible: eligible}]}).countDocuments().lean().exec() ) / size);
+    res.status(200).send({allDeaths, total_pages})
+})
+
+router.get("/all", async (req, res) => {
+
+    const page = +req.query.page || 1;
+    const size = 10;
+    const offset = (page - 1) * size;
+    
+    try {
+        const allDeaths = await BrainDeath.find().sort({_id:-1}).skip(offset).limit(size).populate("hospital").lean().exec();
+        const total_pages = Math.ceil((await BrainDeath.find().countDocuments().lean().exec() ) / size);
+        res.status(200).send({allDeaths, total_pages})
+    } catch(err) {
+        return res.status(400).send({ err: err.message })
+    }
 })
 
 router.get("", async (req, res) => {
-    console.log(req.query)
+
+    const page = +req.query.page || 1;
+    const size = 10;
+    const offset = (page - 1) * size;
+    
     try {
-        const allDeaths = await BrainDeath.find({hospital: {state: req.query.state}}).populate("hospital").lean().exec();
-        res.status(200).send({allDeaths})
+        const allDeaths = await BrainDeath.find({$or: [{state: req.query.state}, {organsAvailable: req.query.organ}]}).sort({_id:-1}).skip(offset).limit(size).populate("hospital").lean().exec();
+        const total_pages = Math.ceil((await BrainDeath.find({$or: [{state: req.query.state}, {organsAvailable: req.query.organ}]}).countDocuments().lean().exec() ) / size);
+        res.status(200).send({allDeaths, total_pages})
     } catch(err) {
         return res.status(400).send({ err: err.message })
     }
