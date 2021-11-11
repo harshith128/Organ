@@ -6,16 +6,17 @@ import {Route,Switch} from 'react-router-dom'
 import Landingpage from './components/landing/Landingpage';
 
 
-import { Second_Page, Second_page } from './components/Second_page';
+import { Second_Page } from './components/Second_page';
 import{Thanks_page} from "./components/Thanks_Hospital"
-import{Thanks_Patient_page, Thanks_Patient_Page} from "./components/Thanks_patient"
+import{Thanks_Patient_page } from "./components/Thanks_patient"
 import{Login} from "./components/Login"
-import{Doner_details}from "./components/DonerDetails"
+import{Doner_details}from "./components/DonerDetails";
+import { OrganAvailability } from './components/OrganAvailability';
+
 import{Organ_Wish_To_Donate} from "./components/OrganWishToDonate"
 import{Confirm_BD_Details} from "./components/Confirm_BD_Details"
 import{Patient_Details} from "./components/Enter_Patient_Details"
 import{Confirm_Patient_Details} from "./components/Confirm_Patient_Details"
-
 
 
 
@@ -42,6 +43,11 @@ function App() {
         <Route path="/d_d" exact>
            <Doner_details />
         </Route>
+
+         <Route path="/o_a" exact>
+           <OrganAvailability />
+         </Route>
+
         <Route path="/O_W_T_D" exact>
            <Organ_Wish_To_Donate />
         </Route>

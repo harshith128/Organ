@@ -13,6 +13,7 @@ const brainDeathSchema = new mongoose.Schema({
     bloodGroup:{type:String, require:true, minlength:2},
     eligible:[{type:String, require:true, minlength:2}],
     organsAvailable:[{type:String, require:true, minlength:2}],
+    state:{type:String, require:true, minlength:2},
     hospital:{type:mongoose.Schema.Types.ObjectId, ref:"hospital", required:true}
 }, {
     versionKey:false,
