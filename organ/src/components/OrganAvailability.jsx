@@ -1,7 +1,8 @@
 import {useEffect, useState} from "react";
 import { organs } from "../utils/request";
 import "./organAvailability.css"
-
+import Navbar from "./navbar/Navbar";
+import Footer from "./footer/Footer";
 export const OrganAvailability = () => {
     const [data, setData] = useState([]);
     const [st, setSt] = useState("Karnataka");
@@ -50,29 +51,37 @@ export const OrganAvailability = () => {
 
     return (
         <div className="avail">
+            <Navbar />
+            <div className="organ-avail-head">
+                <h4>Organ Availability</h4>
+                <div className="organ-avail-line"></div>
+            </div>
             <div className="data">
-                <div>
+                <div className="data-search">
                     <select name="st" onChange={ handleChange }>
                         <option value="Karnataka">Karnataka</option>
                         <option value="Tamilnadu">Tamilnadu</option>
                         <option value="Kerala">Kerala</option>
                     </select>
-                    <button onClick={ handleState }>S</button>
-                    <button onClick={ handleFilter }>F</button>
+                    <button onClick={ handleState } className="btn-sear"><img src="last_search.png" alt="" /></button>
+                    <button onClick={ handleFilter} className="btn-filt"><img src="hosp_filter.png" alt="" /></button>
                 </div>
                 {
-                    !filt ? (<div>
-                            <select name="org" onChange={ handleOrgChange }>
+                    !filt ? (<div className="filter-comp">
+                        <div>Organ</div>
+                         <div>Blood Group</div>
+                           <div> <select name="org" onChange={ handleOrgChange }>
                                 <option value="eye">Eye</option>
                                 <option value="heart">Heart</option>
                                 <option value="liver">Liver</option>
-                            </select>
+                        </select></div>
+                        <div>
                             <select name="bld" onChange={ handleBldChange }>
                                 <option value="Ap">A+</option>
                                 <option value="ABp">AB+</option>
                                 <option value="Op">O+</option>
                                 <option value="On">O-</option>
-                            </select>
+                            </select></div>
                         </div>
                         ) : <div></div>
                 }
@@ -102,6 +111,7 @@ export const OrganAvailability = () => {
                 </div>) : <div></div>
                 }
             </div>
+            <Footer />
         </div>
     )
 }

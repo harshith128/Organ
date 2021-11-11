@@ -7,7 +7,7 @@
 
 .land_activity{
     display: grid;
-    grid-template-columns: 89% 6%;
+    grid-template-columns: 85% 9%;
     margin-left: 5%;
     margin-top: 2%;
     font-family: Poppins;
@@ -21,12 +21,12 @@
     color: #40457A;
 }
 .activities{
-    width: 25%;
-    margin-top: 2%;
+    width: 30%;
+    margin-top: 5%;
     margin-left: 5%;
 }
 .activities img{
-    width: 290%;
+    width: 250%;
     height: 13vw;
     border-radius: 12px;
 }
@@ -61,8 +61,8 @@
 }
 .activities_grid{
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-gap: 7%;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 3%;
     margin-left: 4%;
     margin-right: 5%;
 }
