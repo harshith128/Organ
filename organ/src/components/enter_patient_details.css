@@ -1,0 +1,42 @@
+.pdmain{
+    width:90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 15px;
+}
+#pdhead{
+    background-color:red;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 0px;
+    height: 40px;
+    font-weight: 600;
+    padding-top: 5px;
+    text-align: center;
+
+}
+.line1{
+    color: #90ADFF
+}
+.epd{
+    text-align: center;
+    font-size: 1.5rem;
+    color:#142674;
+    font-weight: 600;
+}
+.epd1{
+    font-size: 1.25rem;
+    color:#17295E;
+    margin-right: 9.5%;
+    margin-left: .5%;
+}
+.epd2{
+    font-size: 1.25rem;
+    color:#17295E;
+    font-weight: 500;
+}
+.c{
+    color: blue;
+    background-color: blue;
+}
