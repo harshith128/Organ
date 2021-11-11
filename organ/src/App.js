@@ -14,6 +14,8 @@ import{Doner_details}from "./components/DonerDetails"
 import{Organ_Wish_To_Donate} from "./components/OrganWishToDonate"
 import{Confirm_BD_Details} from "./components/Confirm_BD_Details"
 
+import{HospitalForm} from "./components/HospitalForm";
+import{RegisterForm} from "./components/RegisterForm";
 
 
 
@@ -25,6 +27,13 @@ function App() {
          <Route path="/" exact>
            <Landingpage />
         </Route>
+
+        <Route path="/register" exact>
+           <RegisterForm />
+           </Route>
+           <Route path="/hospital" exact>
+           <HospitalForm />
+           </Route>
         <Route path="/registration" exact>
            <Second_Page />
          </Route>
@@ -46,6 +55,7 @@ function App() {
         <Route path="/C_BD_D" exact>
            <Confirm_BD_Details />
         </Route>
+      
          
         </Switch>  
     </div>
