@@ -1,12 +1,14 @@
 import "./RegisterForm.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import Navbar from "./navbar/Navbar";
 import Footer from "./footer/Footer";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 
 export function RegisterForm({props}) {
+    const [change, setChange] = useState(true);
   const [disp,setDisp]=useState(false)
     const location = useLocation()
   console.log("location",location.state);
@@ -21,6 +23,28 @@ console.log("data",data.name);
     e.preventDefault()
     setDisp(true)
 }
+
+const handleRegister = (e) => {
+    e.preventDefault(data); 
+    setChange(!change)
+}
+
+const registerHospital = async()=>{
+    const res = axios.post('/register', {
+        data
+      })
+      .then((response) => {
+        console.log(response);
+      }, (error) => {
+        console.log(error);
+      });
+}
+
+useEffect(() => {
+    registerHospital()
+}, [change])
+
+
  return(
   <>
   <Navbar/>
@@ -272,9 +296,9 @@ console.log("data",data.name);
     </div>
     </div>
 
-    
+    {/* <Link to={{pathname: '/register'}}>Register</Link> */}
     <div className="buttons">
-      <button className="register">Register</button>
+      <button className="register" onClick={ handleRegister }>Register</button>
       <button onClick={handleEdit}className="edit">Edit</button>
     </div>
     {/* <input className="submit" type="submit"/> */}

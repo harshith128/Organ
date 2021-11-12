@@ -20,6 +20,7 @@ import{HospitalForm} from "./components/HospitalForm";
 import{RegisterForm} from "./components/RegisterForm";
 import{Patient_Details} from "./components/Enter_Patient_Details"
 import{Confirm_Patient_Details} from "./components/Confirm_Patient_Details"
+import OTPBox from './components/OtpRegister';
 
 
 
@@ -37,6 +38,9 @@ function App() {
            </Route>
            <Route path="/hospital" exact>
            <HospitalForm />
+           </Route>
+          <Route path="/otp" exact>
+            <OTPBox />
            </Route>
         <Route path="/registration" exact>
            <Second_Page />
