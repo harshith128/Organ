@@ -14,7 +14,7 @@ dob:"",
 blood_group:"",
 gender:"",
 problem:"",
-certificate:"",
+//  certificate:"",
 heart:"",
 lungs:"",
 kidney:"",
@@ -89,7 +89,7 @@ function Patient_Details(){
                         <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                         <label className="f2">Upload Medical Certificate*</label>
                         <br></br> <br></br>
-                        <input onChange={handleChange} type="file" className="f3" name="certificate" />
+                        <input  type="file" className="f3" name="certificate" />
                         
                         </div>
                         <br/> <br/> <br/> <br/>
@@ -129,7 +129,9 @@ function Patient_Details(){
              <input onChange={handleChange} type="checkbox"  className="c"name="bloodvesseles" id="Bloodvesseles"/>
              <label for="heart" className="epd1">Blood Vesseles</label>
              <br/><br/><br/>
-             <button className="nsb1" onClick={handleSubmit} ><Link to={{pathname: '/c_p_d',state: { formData}}}state={formData} style={{textDecoration:"none" , color:" white"}}>Submit</Link></button>
+              <button className="nsb1" onClick={handleSubmit} ><Link to={{pathname: '/c_p_d',state: { formData}}}state={formData} style={{textDecoration:"none" , color:" white"}}>Submit</Link></button> 
+
+             {/* <button className="nsb1" onClick={handleSubmit} >Submit</button> */}
             
              
 

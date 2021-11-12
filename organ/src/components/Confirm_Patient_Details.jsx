@@ -74,7 +74,7 @@ console.log(tissues)
                         <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                         <label className="f2">Uploaded Medical Certificate*</label>
                         <br></br> <br></br>
-                        <input type="file" className="f3" name=" certificate" value={data.certificate} />
+                        <input type="file" className="f3" name=" certificate"  />
                         
                         </div>
                         <br/> <br/> <br/> <br/>
@@ -86,17 +86,18 @@ console.log(tissues)
              <p className="epd2">Seeking Organs</p>
             
              <br/>
-            
-             <p className ="cpd2">Selected Organs</p>
-             {organs.map(el=><h3>{el}</h3>)}
+            <div className="showTissues" >
+             <p className ="cpd2"> Organs</p>
+             {organs.map(el=><div className="printTissue">{el}</div>)}
              <br/>
-             
+             </div>
 
              <br/><br/>
-             <p className ="cpd2">Selected Tissues</p>
-             {tissues.map(el=><h3>{el}</h3>)}
+             <div className="showTissues">
+             <p className ="cpd2"> Tissues</p>
+             {tissues.map(el=><div className="printTissue">{el}</div>)}
              <br/>
-             
+             </div>
              <br/><br/>
              <button className="cbddbt1">Register</button>
                 <button className="cbddbt2"><Link to={{pathname: '/editDetails',state: { data}}}state={data} style={{textDecoration:"none" , color:"#17295E"}}>Edit</Link></button>

@@ -3,3 +3,25 @@
     color: #596896;
     font-size: 1.25rem;
 }
+
+.showTissues{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.printTissue{
+    /* border: 1px solid black; */
+    width: 105px;
+    height: 40px;
+    background: #17295E;
+    border-radius: 8px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+     line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 1%;
+}

@@ -20,14 +20,11 @@ import{HospitalForm} from "./components/HospitalForm";
 import{RegisterForm} from "./components/RegisterForm";
 import{Patient_Details} from "./components/Enter_Patient_Details"
 import{Confirm_Patient_Details} from "./components/Confirm_Patient_Details"
-<<<<<<< HEAD
 import{Edit_patientDetails} from "./components/Edit_patientDetails";
 
-=======
 import {Login_bd} from "./components/Login_bd"
 
 import {Patient_Second_Page} from "./components/Patient_sec_page"
->>>>>>> 20d16fe5a773996fc48e9b3e08f217e674445740
 
 function App() {
  
