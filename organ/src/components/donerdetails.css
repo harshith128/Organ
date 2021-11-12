@@ -101,3 +101,11 @@
 .f4::selection{
     color: #17295E;
 }
+
+.f7{
+    width: 80%;
+    margin-left: 9%;
+    font-size: 1.25rem;
+    color: #596896;
+    margin-top: 10px;
+}

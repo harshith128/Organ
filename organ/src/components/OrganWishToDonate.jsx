@@ -2,53 +2,35 @@ import Navbar from './navbar/Navbar'
 
 import Footer from './footer/Footer'
 import {Second_Component} from "./Second_Component"
+import { useLocation } from "react-router";
 import "./organ_wish_to_donate.css"
 import { useState } from 'react/cjs/react.development'
+import {Link} from "react-router-dom";
 const init={
     all_organs:""
 }
-const alldata={
-    all_organs:"yes",
-    Heart:true,
-    Lungs:true,
-    Kidneys:true,
-    Liver:true,
-    Intestine:true,
-    EyeBall:true,
-    skin:true,
-    Bones:true,
-    HeartValves:true,
-    BloodVessels:true
-}
+
 
 
     
 
 function Organ_Wish_To_Donate(){
+
+    const location = useLocation()
+    console.log("location",location.state)
+    const data1=location.state.data;
+    const file1=location.state.file;
+    //console.log(data1,file1)
     const [f_data,setf_data]=useState(init)
-    const [data,setdata]=useState()
+    const [Odata,setOdata]=useState()
     const handleChange=(e)=>{
         let {name,value,checked,type}=e.target
         value=type==="checkbox"?checked:value
-        setf_data({[name]:value})
-        console.log(f_data)
-        if(f_data.all_organs=="Yes"){
-            setdata(alldata)
-            console.log(data)
+        setOdata({...Odata,[name]:value})
 
-        }
-        else{
-            setdata({...data,[name]:value})
-            console.log(data)
-
-        }
-        
-      
-       
-
-        
-
-
+    }
+    const handleClick1=()=>{
+        console.log("needed data:",data1,file1,Odata)
     }
     return (
         <div>
@@ -105,7 +87,7 @@ function Organ_Wish_To_Donate(){
                                 </div>
                                 <div>
                                 <img  className="otwd_img" src="Skin.png"/>
-                                <br/> <input type="checkbox"name="skins" id="skins" value="checked"  onChange={handleChange}/>
+                                <br/> <input type="checkbox"name="skin" id="skins" value="checked"  onChange={handleChange}/>
                                 <label for="skins" className="f5">Skin</label>
                                 </div>
                                 <div>
@@ -127,7 +109,8 @@ function Organ_Wish_To_Donate(){
                                 <br/>
 
                         </div>
-                        <button className="nsb1">Next Step</button>
+                        <button className="nsb1" disabled={Odata===undefined} onClick={handleClick1}>
+                        <Link to={{pathname: '/C_BD_D',state: {data1,file1,Odata}}}state={data1,file1,Odata} style={{textDecoration:"none" , color:" white"}}>Next Step</Link></button>
                         <br/>
             </div>
 

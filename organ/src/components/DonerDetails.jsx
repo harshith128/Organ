@@ -4,6 +4,8 @@ import Footer from './footer/Footer'
 import {Second_Component} from "./Second_Component"
 import "./donerdetails.css"
 import { useRef, useState } from "react";
+import {Progressbar} from "./Progressbar"
+import {Link} from "react-router-dom";
 
 const init={
     name:"",
@@ -15,6 +17,9 @@ const init={
     brain_death_time:"",
     ODcard:"",
     f_aprooval:"",
+    eligible_blood_group:["O+","AB+"],
+    Patient_mobile_number:"",
+    email:""
    
 
 }
@@ -40,6 +45,9 @@ function Doner_details(){
         //console.log("ref:",ref)
        // console.log("setfile:",file)
 
+    }
+    const handleClick=()=>{
+        console.log(data,file)
     }
     return (
         
@@ -73,21 +81,28 @@ function Doner_details(){
                         <br></br>
                         <select className="f1" name="gender"onChange={handleChange}>
                             <option > </option>
-                            <option value="M">Male</option>
-                            <option value="F">Female</option>
-                            <option value="O">Other</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
                         </select>
                         <label className="f2">Cause of Death*</label>
                         <br></br>
                         <input type="text" className="f1" name="cause_of_death" onChange={handleChange}/>
-                        <label className="f2">Brain Death Date*</label>
+                        <label className="f2">Patient Mobile Number*</label>
                         <br></br>
-                        <input type="date" className="f1" name="brain_death_date" onChange={handleChange}/>
-
+                        <input type="number" className="f1" name="Patient_mobile_number" onChange={handleChange}/>
+                        <label className="f2">Patient Mail ID*</label>
+                        <br></br>
+                        <input type="email" className="f1" name="email" onChange={handleChange}/>
+                       
 
                     </div>
                     <div className="right">
-                        <label className="f2"> Brain Death Time*</label>
+                    <label className="f2">Brain Death Date*</label>
+                        <br></br>
+                        <input type="date" className="f1" name="brain_death_date" onChange={handleChange}/>
+
+                        <label className="f7"> Brain Death Time*</label>
                         <input type="time" className="f1" name="brain_death_time" onChange={handleChange}/>
                         <label className="f2">Patient have OD card*</label>
                         <br></br>
@@ -116,7 +131,8 @@ function Doner_details(){
             <button className="nsb1" disabled={data.name.trim().length<2||data.dob.trim().length<5||
                 data.blood_group.trim().length<1||data.gender.trim().length<1||data.cause_of_death.trim().length<3||
                 data.brain_death_date.trim().length<5||data.brain_death_time.trim().length<3||data.ODcard.trim().length<2||
-                data.f_aprooval.trim().length<1} onClick={()=>console.log(data,file)}>Next Step</button>
+                data.f_aprooval.trim().length<1||data.Patient_mobile_number.trim().length!=10||data.email.trim().length<8} onClick={handleClick}>
+                <Link to={{pathname: '/O_W_T_D',state: {data,file}}}state={data,file} style={{textDecoration:"none" , color:" white"}}>Next Step</Link></button>
             <div>
             <Footer/>
             </div>
