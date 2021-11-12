@@ -20,7 +20,7 @@ import{HospitalForm} from "./components/HospitalForm";
 import{RegisterForm} from "./components/RegisterForm";
 import{Patient_Details} from "./components/Enter_Patient_Details"
 import{Confirm_Patient_Details} from "./components/Confirm_Patient_Details"
-
+import{Edit_patientDetails} from "./components/Edit_patientDetails";
 
 
 function App() {
@@ -69,6 +69,10 @@ function App() {
         </Route>
         <Route path="/c_p_d" exact>
            <Confirm_Patient_Details />
+        </Route>
+        <Route path="/editDetails" exact>
+           <Edit_patientDetails/>
+
         </Route>
         </Switch>  
     </div>
