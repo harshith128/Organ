@@ -49,23 +49,6 @@ function Patient_Details(){
                     <div className="left">
                     <label className="f2">Patient Name*</label>
                         <br></br>
-<<<<<<< HEAD
-                    <input onChange={handleChange} type="text"className="f1" name="name1" />
-                    
-                    <label className="f2">Patient Contact Number*</label>
-                        <br></br>
-                    <input onChange={handleChange} type="Number"className="f1" name="contact_number" />
-                    <label className="f2">Patient Email-ID*</label>
-                        <br></br>
-                    <input onChange={handleChange}type="email"className="f1" name="email" />
-
-                        <label className="f2">Date of Birth*</label>
-                        <br></br>
-                        <input onChange={handleChange} type="date" className="f1" name="dob" />
-                        <label className="f2">Blood Group*</label>
-                        <br></br>
-                        <select onChange={handleChange} className="f1" name="blood_group">
-=======
                     <input type="text"className="f1" name="name"  />
                     <label className="f2">Patient Contact Number*</label>
                         <br></br>
@@ -80,7 +63,6 @@ function Patient_Details(){
                         <label className="f2">Blood Group*</label>
                         <br></br>
                         <select className="f1" name="blood_group" >
->>>>>>> c6c78bcf89024fb75ce4ae67364418211d990589
                             <option > </option>
                             <option value="O+">O+</option>
                             <option value="O-">O-</option>
@@ -94,11 +76,7 @@ function Patient_Details(){
                         <div>
                         <label className="f2">Gender*</label>
                         <br></br>
-<<<<<<< HEAD
-                        <select onChange={handleChange} className="f1" name="gender">
-=======
                         <select className="f1" name="gender" >
->>>>>>> c6c78bcf89024fb75ce4ae67364418211d990589
                             <option > </option>
                             <option value="M">Male</option>
                             <option value="F">Female</option>
@@ -124,11 +102,8 @@ function Patient_Details(){
              <br/><br/>
              <p className ="epd2">Selecting Organs</p>
              <br/>
-<<<<<<< HEAD
              <input  onChange={handleChange}  type="checkbox" className="c"name="heart" id="heart" />
-=======
              <input type="checkbox" className="c"name="Heart" id="heart" value="checked"/>
->>>>>>> c6c78bcf89024fb75ce4ae67364418211d990589
              <label for="heart" className="epd1">Heart</label>
              <input onChange={handleChange} type="checkbox" className="c"name="lungs" id="lungs"/>
              <label for="lungs" className="epd1">Lungs</label>
