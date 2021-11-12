@@ -3,7 +3,7 @@ import "./login.css"
 import { ReactComponent as MySvgFile } from "../components/asset/Login_heart.svg"
 import Navbar from './navbar/Navbar'
 import Footer from './footer/Footer'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 const initstate={
     userid:"",
@@ -12,7 +12,8 @@ const initstate={
 
 
 function Login_bd(){
-    const [data,setData]=useState(initstate)
+    const [data,setData]=useState(initstate);
+    const [login, setLogin] = useState(null);
     // const{userid,password}=data;
 
     const handleChange=(e)=>{
@@ -20,6 +21,41 @@ function Login_bd(){
         setData({...data,[name]:value});
         //console.log(data)
     }
+
+    const handleClick = () => {
+        setLogin(true);
+    }
+
+    const handleLogin = async() => {
+        if(login === null || ! login) return;
+        else {
+            const res = await  fetch("http://localhost:2737/hospital/login", {
+                method: "POST",
+                body: JSON.stringify({
+                    userID: data.userid,
+                    password: data.password
+                }),
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            })
+            const dt = await res.json()
+            console.log(dt)
+            console.log(login)
+            if(res.status === 201) {
+                console.log(dt)
+                setLogin(false);
+            } else {
+                alert(`something went wrong ${res.status}`)
+                console.log(dt)
+                setLogin(false);
+            }
+        }
+    }
+
+    useEffect(() => {
+        handleLogin()
+    }, [login])
    
    
     return(
@@ -53,8 +89,7 @@ function Login_bd(){
                 
                
                 </form>
-                <Link to={"/brain_death"}><button className="login_btn" disabled={data.password.trim().length<6||data.userid.trim().length<8} onClick={()=>console.log(data)}>Login</button>
-                 </Link>
+                <button className="login_btn" disabled={data.password.trim().length<8||data.userid.trim().length<6} onClick={handleClick}>Login</button>
                 <div className="last">
                 <p>Don't have an account?</p>
                 <Link to={"/hospital"}><button className="reg_btn" >Register Now</button>

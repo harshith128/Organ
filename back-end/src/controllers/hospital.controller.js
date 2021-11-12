@@ -107,6 +107,7 @@ router.post("/login",
     async(req, res) => {
         try{
             let hospital = await Hospital.findOne({userID: req.body.userID})
+            // console.log(hospital)
             if(! hospital) {
                 return res.status(400).send({ message: "invalid User ID or Password" })
             }
