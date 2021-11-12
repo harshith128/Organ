@@ -5,16 +5,15 @@ import Navbar from './navbar/Navbar'
 import Footer from './footer/Footer'
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
 const initstate={
     userid:"",
     password:"",
 };
 
 
-function Login(){
+function Login_bd(){
     const [data,setData]=useState(initstate)
-    const{userid,password}=data;
+    // const{userid,password}=data;
 
     const handleChange=(e)=>{
         const {name,value}=e.target;
@@ -54,12 +53,13 @@ function Login(){
                 
                
                 </form>
-                <Link to="/patient"><button className="login_btn" disabled={data.password.trim().length<6||data.userid.trim().length<8} onClick={()=>console.log(data)}>Login</button></Link>
-               
+                <Link to={"/brain_death"}><button className="login_btn" disabled={data.password.trim().length<6||data.userid.trim().length<8} onClick={()=>console.log(data)}>Login</button>
+                 </Link>
                 <div className="last">
                 <p>Don't have an account?</p>
-                <Link to="/hospital"><button className="reg_btn" >Register Now</button></Link>
-                </div>
+                <Link to={"/hospital"}><button className="reg_btn" >Register Now</button>
+                 </Link>
+                 </div>
 
 
 
@@ -69,4 +69,4 @@ function Login(){
         </div>
     )
 }
-export{Login}
+export{Login_bd}

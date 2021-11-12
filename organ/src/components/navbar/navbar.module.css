@@ -1,3 +1,6 @@
+* a{
+    text-decoration: none;
+}
 .navbar {
    position: fixed;
    width: 100%;
@@ -91,7 +94,10 @@
 .reg{
     color: #17295E;
 }
-:hover > .reg{
+.reg:hover,
+.apro:hover,
+.wait:hover,
+.org:hover {
     color: #ED2025;
 
 
@@ -100,22 +106,26 @@
     display: none;
      color: #17295E;
 }
-.reg:hover > .detailreg{
+.reg:hover .detailreg{
     display: block;
 }
 .detailreg1{
     color: #17295E;
 }
+.detailreg:hover{
+    display: block;
+}
 
-:hover>.detailreg1 {
+.detailreg1:hover{
     color: #ED2025;
-
+    display: block;
+   
 }
 
 .detailreg2 {
     color: #17295E;
 }
-:hover>.detailreg2 {
+.detailreg2:hover {
     color: #ED2025;
 
 

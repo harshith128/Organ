@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./patient_sec_page.css"
 import {Second_Component} from "./Second_Component"
 
@@ -12,7 +13,7 @@ function Patient_Second_Page(){
                 <div className="inside_box">
                    
                     <img src="Rectangle 226.svg" className="img"></img>
-                    <p className="inside_box1">Brain Death Registration</p>
+                    <Link to="/add_patient"><p className="inside_box1">New Patient Registration</p></Link>
                 </div>
 
             </div>
