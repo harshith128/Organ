@@ -14,13 +14,18 @@
     margin-left: 10%;
     margin-right: 20%;
     font-size: 1.125rem;
-    color: black;
+    color: 
+    #17295E;
     font-weight: 500;
 
 }
+.left_div>p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 .right_div{
-    margin-top: 10%;
-    width:70%;
+  
+    width:78%;
     margin-left: 15%;
 }
 .wel{
@@ -37,7 +42,7 @@ text-align: center;
 
 color: #17295E;
 }
-.input{
+.input11{
     width: 100%;
     border: 0.8px solid #17295E;
     font-size:medium;
@@ -111,9 +116,10 @@ color: #FFFFFF;
 }
 .last{
     display: flex;
-   margin-left: 10%;
+   margin-left: 20%;
    margin-right: 10%;
    font-size: 14px;
+   margin-top: 1%;
    
 color: #545454;
 }
@@ -128,5 +134,8 @@ line-height: 18px;
 
 color: #545454;
 
+}
+.lp{
+    margin-top: 0px;
 }
 

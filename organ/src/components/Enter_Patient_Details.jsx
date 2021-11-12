@@ -6,6 +6,7 @@ import "./enter_patient_details.css"
 
 function Patient_Details(){
     return(
+      
         <div>
              <Navbar/>
             <Second_Component/>
@@ -16,20 +17,20 @@ function Patient_Details(){
                     <div className="left">
                     <label className="f2">Patient Name*</label>
                         <br></br>
-                    <input type="text"className="f1" name="name" />
+                    <input type="text"className="f1" name="name"  />
                     <label className="f2">Patient Contact Number*</label>
                         <br></br>
-                    <input type="Number"className="f1" name="contact_number" />
+                    <input type="Number"className="f1" name="contact_number"  />
                     <label className="f2">Patient Email-ID*</label>
                         <br></br>
-                    <input type="email"className="f1" name="email" />
+                    <input type="email"className="f1" name="email"  />
 
                         <label className="f2">Date of Birth*</label>
                         <br></br>
-                        <input type="date" className="f1" name="dob" />
+                        <input type="date" className="f1" name="dob"  />
                         <label className="f2">Blood Group*</label>
                         <br></br>
-                        <select className="f1" name="blood_group">
+                        <select className="f1" name="blood_group" >
                             <option > </option>
                             <option value="O+">O+</option>
                             <option value="O-">O-</option>
@@ -43,7 +44,7 @@ function Patient_Details(){
                         <div>
                         <label className="f2">Gender*</label>
                         <br></br>
-                        <select className="f1" name="gender">
+                        <select className="f1" name="gender" >
                             <option > </option>
                             <option value="M">Male</option>
                             <option value="F">Female</option>
@@ -69,7 +70,7 @@ function Patient_Details(){
              <br/><br/>
              <p className ="epd2">Selecting Organs</p>
              <br/>
-             <input type="checkbox" className="c"name="heart" id="heart" value="checked"/>
+             <input type="checkbox" className="c"name="Heart" id="heart" value="checked"/>
              <label for="heart" className="epd1">Heart</label>
              <input type="checkbox" className="c"name="Lungs" id="lungs" value="checked"/>
              <label for="heart" className="epd1">Lungs</label>
