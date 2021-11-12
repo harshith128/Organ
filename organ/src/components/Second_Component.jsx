@@ -3,7 +3,7 @@ import "./second_page.css"
 function Second_Component(){
     return (
         <div>
-        <div id="second_page_topbox">
+        <div id="second_page_topbox1">
             <div className="sp_div2">
                     <div className="logo">
                         A
