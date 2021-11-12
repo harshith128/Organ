@@ -1,5 +1,5 @@
 import "./RegisterForm.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router";
 import Navbar from "./navbar/Navbar";
 import Footer from "./footer/Footer";
@@ -8,16 +8,18 @@ import axios from "axios";
 
 
 export function RegisterForm({props}) {
-    const [change, setChange] = useState(true);
+    const pathname = window.location.pathname;
+    // const [loc, setLoc] = useState(pathname); 
+    const [change, setChange] = useState(null);
   const [disp,setDisp]=useState(false)
     const location = useLocation()
-  console.log("location",location.state);
-  console.log("Name",location.state.formData);
+//   console.log("location",location.state);
+//   console.log("Name",location.state.formData);
    //const { state } = this.props.location
  //console.log("state:",props);
      
   const data = location.state.formData
-console.log("data",data.name);
+// console.log("data",data.name);
 // const mail = data.mail;
   const handleEdit=(e)=>{
     e.preventDefault()
@@ -25,24 +27,68 @@ console.log("data",data.name);
 }
 
 const handleRegister = (e) => {
-    e.preventDefault(data); 
-    setChange(!change)
+    e.preventDefault(data);
+    if(change === null) setChange(true);
+    else setChange(!change);
 }
+
+const loadData = () => {
+    if(change === null) return;
+    registerHospital();
+}
+
+
+    useEffect(() => {
+        loadData()
+    }, [change]);
 
 const registerHospital = async()=>{
-    const res = axios.post('/register', {
-        data
-      })
-      .then((response) => {
-        console.log(response);
-      }, (error) => {
-        console.log(error);
-      });
-}
+    // const res = axios.post('/register', {
+    //     data
+    //   })
+    //   .then((response) => {
+    //     console.log(response);
+    //   }, (error) => {
+    //     console.log(error);
+    //   });
 
-useEffect(() => {
-    registerHospital()
-}, [change])
+
+    const res = await  fetch("http://localhost:2737/hospital/register", {
+        method: "POST",
+        body: JSON.stringify({
+            name: data.name,
+            city: data.city,
+            state: data.state,
+            regNumber: data.number,
+            nottoID: data.notto,
+            teleNumber: data.telephone,
+            coordinatorNumber: data.coordinatorNumber,
+            type: data.private === true ? "private" : "government",
+            director: data.director,
+            licenceExpDate: data.date,
+            website: data.website,
+            email: data.mail,
+            password: data.password,
+            coordinator: data.coordinator,
+            address: data.add
+        }),
+        headers: {
+            "Content-Type": "application/json",
+        }
+    })
+    // console.log(loc)
+    const dt = await res.json()
+    const hospToken = dt.token;
+    console.log(dt)
+    if(res.status === 201) {
+        localStorage.setItem("hospToken", JSON.stringify({hospToken:hospToken}));
+        // localStorage.setItem("hospToken", JSON.stringify({hospToken}))
+        window.location.pathname = "/otp";
+    } else {
+        alert(`Something went wrong ${res.status}`)
+    }
+    
+}
 
 
  return(

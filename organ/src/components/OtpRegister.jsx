@@ -1,11 +1,16 @@
-import "./otpRegister.css"
+import "./otpRegister.css";
 import Navbar from './navbar/Navbar';
+
+import { useLocation } from "react-router";
 
 import Footer from './footer/Footer';
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const OTPBox = () => {
+//     const location = useLocation();
+    const [change, setChange] = useState(null);
+    
     const [otp, setOtp] = useState(new Array(4).fill(""));
 
     const handleChange = (element, index) => {
@@ -18,6 +23,49 @@ const OTPBox = () => {
             element.nextSibling.focus();
         }
     };
+
+    const handleVerify = (e) => {
+        if(change === null) setChange(true);
+        else setChange(!change);
+    }
+
+    const verifyHospital = async () => {
+        const {hospToken} = JSON.parse(localStorage.getItem("hospToken"));
+        // console.log(hospToken);
+        // console.log(Number(otp.join("")))
+        
+    const res = await  fetch("http://localhost:2737/hospital/verify", {
+        method: "POST",
+        body: JSON.stringify({
+            otp: Number(otp.join(""))
+        }),
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization":`Bearer ${hospToken}`
+        }
+    })
+    // console.log(loc)
+    const dt = await res.json()
+        if(res.status === 201) {
+            let userID = dt.userID;
+            let email = dt.email;
+            localStorage.setItem("user", JSON.stringify({userID:userID, email:email}));
+            // console.log(dt.userID)
+            window.location.pathname = "/thanks_H";
+        } else {
+            console.log(dt)
+        }
+    }
+
+    const verifyOTP = () => {
+        if(change === null) return;
+        verifyHospital();
+    }
+    
+
+    useEffect(() => {
+        verifyOTP()
+    }, [change])
 
     return (
         <>
@@ -51,8 +99,7 @@ const OTPBox = () => {
                         </button>
                         <button disabled={otp.join("").length !== 4}
                             className={otp.join("").length !== 4 ? "btn_dis" : "btn"}
-                            onClick={e =>
-                                console.log("Entered OTP is " + otp.join(""))
+                            onClick={ handleVerify
                             }
                         >
                             Verify OTP

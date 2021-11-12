@@ -16,6 +16,8 @@ const hospitaltempSchema = new mongoose.Schema({
     coordinator:{type:String, require:true, minlength:3},
     address:{type:String, require:true},
     otp:{type:Number, require:false},
+    director:{type:String, require:true},
+    coordinatorNumber:{type:String, require:true}
 }, {
     versionKey:false,
     timestamps:true
