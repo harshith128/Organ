@@ -100,7 +100,7 @@ color: #2C3F76;
     grid-template-columns: 47% 47%;
    
 }
-.one{
+.one_bd{
    
     
 width: 96%;
@@ -111,7 +111,7 @@ top: 280px;
 background: linear-gradient(104.43deg, #51459D 3.15%, #887DCB 117.72%);;
 border-radius: 8px
 }
-.two{
+.two_bd{
     
 width: 96%;
 height: 160px;
@@ -122,7 +122,7 @@ background: linear-gradient(104.43deg, #51459D 3.15%, #887DCB 117.72%);;
 border-radius: 8px;
 
 }
-.three{
+.three_bd{
    
 width: 96%;
 height: 160px;
@@ -134,7 +134,7 @@ background: linear-gradient(104.43deg, #51459D 3.15%, #887DCB 117.72%);;
 border-radius: 8px;
 
 }
-.four{
+.four_bd{
    
 width: 96%;
 height: 160px;
@@ -148,7 +148,7 @@ border-radius: 8px;
 .vector{
     margin-top: 10px;
 }
-.inside_box{
+.inside_box_bd{
     width:46%;
     
    min-height: 100%;
@@ -158,7 +158,7 @@ border-radius: 8px;
    text-align: center;
     display: flex;
 }
-.inside_box1{
+.inside_box1_bd{
     font-family: Poppins;
 font-style: normal;
 font-weight: 500;
@@ -170,7 +170,7 @@ color: #FFFFFF;
 
 
 }
-.inside_box2{
+.inside_box2_bd{
     width:48%;
     
    min-height: 100%;
@@ -215,7 +215,7 @@ text-align: center;
     
 }
 
-.img{
+.img_bd{
     color: white;
    
 }

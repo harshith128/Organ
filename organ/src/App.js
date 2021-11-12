@@ -57,7 +57,7 @@ function App() {
            <Route path="/login_brain_death" exact>
            <Login_bd />
         </Route>
-        <Route path="/d_d" exact>
+        <Route path="/add_doner" exact>
            <Doner_details />
         </Route>
 
@@ -71,7 +71,7 @@ function App() {
         <Route path="/C_BD_D" exact>
            <Confirm_BD_Details />
         </Route>
-        <Route path="/p_d" exact>
+        <Route path="/add_patient" exact>
            <Patient_Details />
         </Route>
         <Route path="/c_p_d" exact>
