@@ -87,14 +87,14 @@ console.log(tissues)
             
              <br/>
             <div className="showTissues" >
-             <p className ="cpd2"> Organs</p>
+             <div className ="organDiv"> Organs</div>
              {organs.map(el=><div className="printTissue">{el}</div>)}
              <br/>
              </div>
 
              <br/><br/>
              <div className="showTissues">
-             <p className ="cpd2"> Tissues</p>
+             <div className ="organDiv"> Tissues</div>
              {tissues.map(el=><div className="printTissue">{el}</div>)}
              <br/>
              </div>

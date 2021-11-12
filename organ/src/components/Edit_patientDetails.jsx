@@ -85,15 +85,18 @@ console.log(tissues)
              <p className="epd2">Seeking Organs</p>
              <br/>
             
-             <p className ="cpd2">Selected Organs</p>
-             {organs.map(el=><h3>{el}</h3>)}
+             <div className="showTissues" >
+             <div className ="organDiv"> Organs</div>
+             {organs.map(el=><div className="printTissue">{el}</div>)}
              <br/>
-             
+             </div>
 
              <br/><br/>
-             <p className ="cpd2">Selected Tissues</p>
-             {tissues.map(el=><h3>{el}</h3>)}
+             <div className="showTissues">
+             <div className ="organDiv"> Tissues</div>
+             {tissues.map(el=><div className="printTissue">{el}</div>)}
              <br/>
+             </div>
              
              <br/><br/>
              <button className="cbddbt1">Register</button>
