@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 
 const object={
-name1:"",
+name:"",
 contact_number:"",
 email:"",
 dob:"",
@@ -19,6 +19,7 @@ donor_group:[],
 heart:"",
 lungs:"",
 kidney:"",
+liver:"",
 pancreas:"",
 intestine:"",
 eyeballs:"",
@@ -32,6 +33,16 @@ const eliBG = ["A+", "B+", "AB+", "O+", "A-", "B-", "AB-", "O-"];
 const eliBol = [false, false, false, false, false, false, false, false];
 
 function Patient_Details(){
+    let ref=useRef(null)
+    const [file,setfile]=useState(null)
+    const handlefileChange=(e)=>{
+        const file1=e.target.files[0]
+        // console.log( "file1:",file1)
+         ref=(file1)
+         setfile(ref)
+
+
+    }
     const [select0, setSelect0] = useState("eli_p")
     const [select1, setSelect1] = useState("eli_p")
     const [select2, setSelect2] = useState("eli_p")
@@ -49,6 +60,7 @@ function Patient_Details(){
   const handleSubmit=(e)=>{
       e.preventDefault(formData)
       console.log("form:",formData)
+      console.log("file:",file)
   }
 
   const handleBG = (e) => {
@@ -104,20 +116,20 @@ const changeClass = (e) => {
                     <div className="left">
                     <label className="f2">Patient Name*</label>
                         <br></br>
-                    <input type="text"className="f1" name="name"  />
+                    <input type="text"className="f1" name="name" onChange={handleChange} />
                     <label className="f2">Patient Contact Number*</label>
                         <br></br>
-                    <input type="Number"className="f1" name="contact_number"  />
+                    <input type="Number"className="f1" name="contact_number"   onChange={handleChange}/>
                     <label className="f2">Patient Email-ID*</label>
                         <br></br>
-                    <input type="email"className="f1" name="email"  />
+                    <input type="email"className="f1" name="email"  onChange={handleChange} />
 
                         <label className="f2">Date of Birth*</label>
                         <br></br>
-                        <input type="date" className="f1" name="dob"  />
+                        <input type="date" className="f1" name="dob"  onChange={handleChange} />
                         <label className="f2">Blood Group*</label>
                         <br></br>
-                        <select className="f1" name="blood_group" >
+                        <select className="f1" name="blood_group" onChange={handleChange}>
                             <option > </option>
                             <option value="O+">O+</option>
                             <option value="O-">O-</option>
@@ -131,11 +143,11 @@ const changeClass = (e) => {
                         <div>
                         <label className="f2">Gender*</label>
                         <br></br>
-                        <select className="f1" name="gender" >
+                        <select className="f1" name="gender"  onChange={handleChange}>
                             <option > </option>
-                            <option value="M">Male</option>
-                            <option value="F">Female</option>
-                            <option value="O">Other</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
                         </select>
                         <label className="f2">Type of Problem*</label>
                         <br></br>
@@ -151,10 +163,10 @@ const changeClass = (e) => {
                             <p onClick={() => {handleBG(6)}} className={select6} >AB-</p>
                             <p onClick={() => {handleBG(7)}} className={select7} >O-</p>
                         </div>
-                        <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                        <br></br><br></br>
                         <label className="f2">Upload Medical Certificate*</label>
                         <br></br> <br></br>
-                        <input  type="file" className="f3" name="certificate" />
+                        <input  type="file" className="f3" name="certificate"  ref={ref}onChange={handlefileChange} />
                         
                         </div>
                         <br/> <br/> <br/> <br/>
@@ -195,10 +207,10 @@ const changeClass = (e) => {
              <input onChange={handleChange} type="checkbox"  className="c"name="bloodvesseles" id="Bloodvesseles"/>
              <label for="heart" className="epd1">Blood Vesseles</label>
              <br/><br/><br/>
-              {/* <button className="nsb1" onClick={handleSubmit} ><Link to={{pathname: '/c_p_d',state: { formData}}}state={formData} style={{textDecoration:"none" , color:" white"}}>Submit</Link></button>  */}
-
+               <button className="nsb1" onClick={handleSubmit} ><Link to={{pathname: '/c_p_d',state: { formData,file}}}state={formData,file} style={{textDecoration:"none" , color:" white"}}>Submit</Link></button>  
+                {/*
              <button className="nsb1" onClick={handleSubmit} >Submit</button>
-            
+                */ }
              
 
 

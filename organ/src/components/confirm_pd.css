@@ -43,3 +43,23 @@ color: #596896;
     /* margin-top: 1%; */
     margin-left: 13%;
 }
+
+.cpd001{
+    background: #E3E8FF;
+    width:80%;
+    margin-left: 8%;
+    margin-right: 3%;
+    height: 37.5pt;
+    font-size: 1.25rem;
+    
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 1%;
+    margin-bottom: 5%;
+   border-bottom: 1px solid #DAE0FF;
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   color: #17295E;
+   pointer-events: none;       
+}

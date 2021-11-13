@@ -17,6 +17,7 @@ function Confirm_Patient_Details(){
  //console.log("state:",props);
      
   const data = location.state.formData
+  const filedata=location.state.file
 //console.log("data",data.name1);
 const organs=[]
 if(data.heart)organs.push("Heart")
@@ -33,6 +34,9 @@ if(data.bones)tissues.push("Bones")
 if(data.heartvalves)tissues.push("Heartvalves")
 if(data.bloodvesseles)tissues.push("Bloodvesseles")
 console.log(tissues)
+const handleclick1=(e)=>{
+    console.log(filedata,data)
+}
 
     return(
         <div>
@@ -45,37 +49,37 @@ console.log(tissues)
                     <div className="left">
                     <label className="f2">Patient Name*</label>
                         <br></br>
-                    <input type="text"className="f3" name="name1" value={data.name1} />
+                    <input type="text"className="cpd001" name="name1" value={data.name} />
                     <label className="f2">Patient Contact Number*</label>
                         <br></br>
-                    <input type="Number"className="f3" name="contact_number"  value={data.contact_number} />
+                    <input type="Number"className="cpd001" name="contact_number"  value={data.contact_number} />
                     <label className="f2">Patient Email-ID*</label>
                         <br></br>
-                    <input type="email"className="f3" name="email" value={data.email} />
+                    <input type="email"className="cpd001" name="email" value={data.email} />
 
                         <label className="f2">Date of Birth*</label>
                         <br></br>
-                        <input type="text" className="f3" name="dob" value={data.dob} />
+                        <input type="text" className="cpd001" name="dob" value={data.dob} />
                         <label className="f2">Blood Group*</label>
                         <br></br>
-                        <input type="text" className="f3" name="blood_group" value={data.blood_group}/>
+                        <input type="text" className="cpd001" name="blood_group" value={data.blood_group}/>
                            
                      
                         </div>
                         <div>
                         <label className="f2">Gender*</label>
                         <br></br>
-                        <input type="text" className="f3" name="gender" value={data.gender}/>
+                        <input type="text" className="cpd001" name="gender" value={data.gender}/>
                            
                
                         <label className="f2">Type of Problem*</label>
                         <br></br>
-                        <input type="text" className="f3" name="problem" value={data.problem} />
+                        <input type="text" className="cpd001" name="problem" value={data.problem} />
                         <label className="f2">Portable Blood Group From Doner*</label>
                         <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                         <label className="f2">Uploaded Medical Certificate*</label>
                         <br></br> <br></br>
-                        <input type="file" className="f3" name=" certificate"  />
+                        <input type="text" className="cpd001" name=" certificate" value={filedata.name}  />
                         
                         </div>
                         <br/> <br/> <br/> <br/>
@@ -100,9 +104,10 @@ console.log(tissues)
              <br/>
              </div>
              <br/><br/>
-             <button className="cbddbt1">Register</button>
+             <button className="cbddbt1" onClick={handleclick1}>Register</button>
+             
                 <button className="cbddbt2"><Link to={{pathname: '/editDetails',state: { data}}}state={data} style={{textDecoration:"none" , color:"#17295E"}}>Edit</Link></button>
-            
+             
              
 
 
