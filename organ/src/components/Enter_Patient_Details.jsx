@@ -14,6 +14,7 @@ dob:"",
 blood_group:"",
 gender:"",
 problem:"",
+donor_group:[],
 //  certificate:"",
 heart:"",
 lungs:"",
@@ -27,7 +28,19 @@ heartvalves:"",
 bloodvesseles:"",
 }
 
+const eliBG = ["A+", "B+", "AB+", "O+", "A-", "B-", "AB-", "O-"];
+const eliBol = [false, false, false, false, false, false, false, false];
+
 function Patient_Details(){
+    const [select0, setSelect0] = useState("eli_p")
+    const [select1, setSelect1] = useState("eli_p")
+    const [select2, setSelect2] = useState("eli_p")
+    const [select3, setSelect3] = useState("eli_p")
+    const [select4, setSelect4] = useState("eli_p")
+    const [select5, setSelect5] = useState("eli_p")
+    const [select6, setSelect6] = useState("eli_p")
+    const [select7, setSelect7] = useState("eli_p")
+    const {user, hospital, token} = JSON.parse(localStorage.getItem("login"));
     const [formData,setFormData]=useState(object)
   const handleChange=(e)=>{
       const {name,value,type,checked}=e.target
@@ -37,11 +50,53 @@ function Patient_Details(){
       e.preventDefault(formData)
       console.log("form:",formData)
   }
+
+  const handleBG = (e) => {
+    //   console.log(e)
+    eliBol[e] = ! eliBol[e]
+    // // console.log(eliBG[e], eliBol[e])
+    // console.log(object.donor_group)
+    object.donor_group = eliBG.filter((a, b) => {return eliBol[b]})
+    setFormData({...formData,donor_group:object.donor_group});
+    // // console.log(data.donor_group)
+    changeClass(e)
+}
+const changeClass = (e) => {
+    // console.log(e)
+    switch (e) {
+        case 0:
+            eliBol[e] ? setSelect0("eli_select") : setSelect0("eli_p") 
+            break;
+        case 1:
+            eliBol[e] ? setSelect1("eli_select") : setSelect1("eli_p") 
+            break;
+        case 2:
+            eliBol[e] ? setSelect2("eli_select") : setSelect2("eli_p") 
+            break;
+        case 3:
+            eliBol[e] ? setSelect3("eli_select") : setSelect3("eli_p") 
+            break;
+        case 4:
+            eliBol[e] ? setSelect4("eli_select") : setSelect4("eli_p") 
+            break;
+        case 5:
+            eliBol[e] ? setSelect5("eli_select") : setSelect5("eli_p") 
+            break;
+        case 6:
+            eliBol[e] ? setSelect6("eli_select") : setSelect6("eli_p") 
+            break;
+        case 7:
+            eliBol[e] ? setSelect7("eli_select") : setSelect7("eli_p") 
+            break;
+        default:
+            break;
+    }
+}
     return(
       
         <div>
              <Navbar/>
-            <Second_Component/>
+            <Second_Component  user={ user } hospital= { hospital }  />
             <br></br>
             <div className="pdmain">
             <p id="pdhead">Enter Patient Details</p>
@@ -86,6 +141,16 @@ function Patient_Details(){
                         <br></br>
                         <input onChange={handleChange} type="text" className="f1" name="problem" />
                         <label className="f2">Portable Blood Group From Doner*</label>
+                        <div className= "eli">
+                            <p onClick={() => {handleBG(0)}} className={select0} >A+</p>
+                            <p onClick={() => {handleBG(1)}} className={select1} >B+</p>
+                            <p onClick={() => {handleBG(2)}} className={select2} >AB+</p>
+                            <p onClick={() => {handleBG(3)}} className={select3} >O+</p>
+                            <p onClick={() => {handleBG(4)}} className={select4} >A-</p>
+                            <p onClick={() => {handleBG(5)}} className={select5} >B-</p>
+                            <p onClick={() => {handleBG(6)}} className={select6} >AB-</p>
+                            <p onClick={() => {handleBG(7)}} className={select7} >O-</p>
+                        </div>
                         <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                         <label className="f2">Upload Medical Certificate*</label>
                         <br></br> <br></br>
@@ -130,9 +195,9 @@ function Patient_Details(){
              <input onChange={handleChange} type="checkbox"  className="c"name="bloodvesseles" id="Bloodvesseles"/>
              <label for="heart" className="epd1">Blood Vesseles</label>
              <br/><br/><br/>
-              <button className="nsb1" onClick={handleSubmit} ><Link to={{pathname: '/c_p_d',state: { formData}}}state={formData} style={{textDecoration:"none" , color:" white"}}>Submit</Link></button> 
+              {/* <button className="nsb1" onClick={handleSubmit} ><Link to={{pathname: '/c_p_d',state: { formData}}}state={formData} style={{textDecoration:"none" , color:" white"}}>Submit</Link></button>  */}
 
-             {/* <button className="nsb1" onClick={handleSubmit} >Submit</button> */}
+             <button className="nsb1" onClick={handleSubmit} >Submit</button>
             
              
 

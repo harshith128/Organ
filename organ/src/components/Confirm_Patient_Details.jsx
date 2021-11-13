@@ -8,6 +8,7 @@ import "./enter_patient_details.css"
 import "./confirm_pd.css"
 
 function Confirm_Patient_Details(){
+    const {user, hospital, token} = JSON.parse(localStorage.getItem("login"));
 
     const location = useLocation()
   console.log("location",location.state);
@@ -36,7 +37,7 @@ console.log(tissues)
     return(
         <div>
              <Navbar/>
-            <Second_Component/>
+            <Second_Component  user={ user } hospital= { hospital }  />
             <br></br>
             <div className="pdmain">
             <p id="pdhead">Confirm Patient Details</p>
