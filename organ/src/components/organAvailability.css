@@ -81,7 +81,7 @@
 }
 .filter-comp{
         display: grid;
-        grid-template-columns: 10% 10%;
+        grid-template-columns: 20% 20%;
         grid-template-rows: 60% 60%;
         grid-gap: 5%;
         /* margin: auto; */

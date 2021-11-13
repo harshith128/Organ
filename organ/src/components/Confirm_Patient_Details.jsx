@@ -182,11 +182,11 @@ useEffect(() => {
              </div>
 
              <br/><br/>
-             <div className="showTissues">
+             {/* <div className="showTissues">
              <div className ="organDiv"> Tissues</div>
              {tissues.map(el=><div className="printTissue">{el}</div>)}
              <br/>
-             </div>
+             </div> */}
              <br/><br/>
              <button className="cbddbt1" onClick={handleclick1}>Register</button>
              

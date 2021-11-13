@@ -14,8 +14,10 @@ export default function Navbar() {
             </Link></div>
             
             <div className={styles.navflex}>
-                <div ><Link to={"/registration"} className={styles.apro}>
-                    Approved Hospitals</Link></div>
+                {/* <div ><Link to={"/registration"} className={styles.apro}>
+                    Approved Hospitals</Link></div> */}
+                    <div className={styles.apro} >
+                    Approved Hospitals</div>
                 <div className={styles.wait}>Common Waitlist</div>
                 <div className={styles.org}><Link to={"/organ_availability"}>Organs Availability</Link></div>
                 {/* <select name="reg" >

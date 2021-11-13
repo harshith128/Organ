@@ -140,10 +140,10 @@ function Doner_details(){
                         <label className="f2">Cause of Death*</label>
                         <br></br>
                         <input type="text" className="f1" name="cause_of_death" onChange={handleChange}/>
-                        <label className="f2">Patient Mobile Number*</label>
+                        <label className="f2">Relative Mobile Number*</label>
                         <br></br>
                         <input type="number" className="f1" name="Patient_mobile_number" onChange={handleChange}/>
-                        <label className="f2">Patient Mail ID*</label>
+                        <label className="f2">Relative Mail ID*</label>
                         <br></br>
                         <input type="email" className="f1" name="email" onChange={handleChange}/>
                        

@@ -180,7 +180,7 @@ const changeClass = (e) => {
              <p className ="epd2">Selecting Organs</p>
              <br/>
              <input  onChange={handleChange}  type="checkbox" className="c"name="heart" id="heart" />
-             <input type="checkbox" className="c"name="Heart" id="heart" value="checked"/>
+             {/* <input type="checkbox" className="c"name="Heart" id="heart" value="checked"/> */}
              <label for="heart" className="epd1">Heart</label>
              <input onChange={handleChange} type="checkbox" className="c"name="lungs" id="lungs"/>
              <label for="lungs" className="epd1">Lungs</label>
