@@ -23,6 +23,7 @@ import{Confirm_Patient_Details} from "./components/Confirm_Patient_Details"
 import OTPBox from './components/OtpRegister';
 import {Login_bd} from "./components/Login_bd"
 import {Patient_Second_Page} from "./components/Patient_sec_page"
+import {Edit_patientDetails} from "./components/Edit_patientDetails"
 
  import { Report_bd } from './components/Report_bd';
 function App() {
@@ -85,6 +86,10 @@ function App() {
         </Route>
         <Route path="/c_p_d" exact>
            <Confirm_Patient_Details />
+        </Route>
+        <Route path="/editDetails" exact>
+           <Edit_patientDetails/>
+
         </Route>
         </Switch>  
     </div>

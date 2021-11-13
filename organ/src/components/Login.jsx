@@ -48,7 +48,7 @@ function Login(){
                 <input type="password" className="input11" name="password"  onChange={handleChange} required="true"/>
                 <p className="forgot">Forgot Password?</p>
                 <br></br><br></br>
-                <input type="checkbox" className="check" />Keep me logged in
+                <input type="checkbox" className="check" /><label className="kmli">Keep me logged in</label>
                 <br></br><br></br>
                 
                

@@ -3,3 +3,43 @@
     color: #596896;
     font-size: 1.25rem;
 }
+
+.showTissues{
+     /* border: 1px solid black;  */
+    display: flex;
+    position: absolute;
+    /* justify-content: space-evenly; */
+    align-items: center;
+}
+.organDiv{
+    width: 89px;
+    height: 36px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+   font-size: 24px;
+    line-height: 36px;
+/* identical to box height */
+
+text-align: center;
+
+color: #596896;
+}
+.printTissue{
+    /* border: 1px solid black; */
+    min-width: 130px;
+    display: flex;
+    justify-content: space-evenly;
+    height: 40px;
+    background: #17295E;
+    border-radius: 8px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+     line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    /* margin-top: 1%; */
+    margin-left: 13%;
+}

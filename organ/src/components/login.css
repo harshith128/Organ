@@ -118,7 +118,7 @@ color: #FFFFFF;
     display: flex;
    margin-left: 20%;
    margin-right: 10%;
-   font-size: 14px;
+   font-size: .875rem;
    margin-top: 1%;
    
 color: #545454;
@@ -138,4 +138,8 @@ color: #545454;
 .lp{
     margin-top: 0px;
 }
-
+.kmli{
+    color: #545454;
+    font-size: .85rem;
+    margin-left: 1%;
+}
