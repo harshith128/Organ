@@ -54,5 +54,20 @@
 
     color: #253775;
 }
+.pg {
+    width: fit-content;
+    margin: auto;
+}
 
+.pgBtn {
+    background-color: none;
+    border: none;
+    color: navy;
+}
+
+.pgDis > button {
+    background-color: none;
+    border: none;
+    color: rgb(110, 110, 163);
+}
 
