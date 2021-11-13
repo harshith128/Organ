@@ -1,0 +1,58 @@
+.thead_donor {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 3%;
+    height: 54px;
+    flex-grow: 1;
+
+    background: #253775;
+    border-radius: 8px;
+}
+
+.thead_donor h4 {
+    width: 30%;
+    height: 2vw;
+    margin-left: 1%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+}
+
+.trow_donor {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 1%;
+    height: 10vw;
+
+
+    background: #F3F5FF;
+    border-radius: 16px;
+}
+
+.trow_donor p {
+    width: 25%;
+    height: 2vw;
+    margin-left: 1%;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    /* identical to box height */
+
+    /* text-align: center; */
+
+    color: #253775;
+}
+
+

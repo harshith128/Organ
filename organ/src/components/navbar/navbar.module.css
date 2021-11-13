@@ -26,9 +26,9 @@
 }
 .navbar_plus{
     position: absolute;
-    left: 4.6%;
-    right: 0%;
-    top: 10%;
+    left: 0%;
+    right: 0.%;
+    top: -28%;
     bottom: 10.67%;
 
     font-family: Poppins;
@@ -46,14 +46,14 @@
     padding: 0px;
 
     position: absolute;
-   left: 56.5%;
-   right: 1.5%;
+    left: 46.5%;
+    right: 1.5%;
     top: 30.42%;
     bottom: 32.08%;
 }
 .navflex div{
     position: static;
-    width: 137px;
+    width: 100%;
     height: 21px;
     left: 0px;
     top: 0px;
@@ -136,7 +136,7 @@
     right: 4.44%;
     top: 20%;
     bottom: 20%; */
-    width: 12%;
+    width: 72%;
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
