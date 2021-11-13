@@ -24,6 +24,7 @@ import OTPBox from './components/OtpRegister';
 import {Login_bd} from "./components/Login_bd"
 import {Patient_Second_Page} from "./components/Patient_sec_page"
 
+ import { Report_bd } from './components/Report_bd';
 function App() {
  
   return (
@@ -32,7 +33,9 @@ function App() {
          <Route path="/" exact>
            <Landingpage />
         </Route>
-
+        <Route path="/report" exact>
+           <Report_bd />
+           </Route>
         <Route path="/register" exact>
            <RegisterForm />
            </Route>
