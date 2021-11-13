@@ -43,6 +43,9 @@ router.post("",
 
             let hosp = await Hospital.findOne({userID:req.body.hospital}).lean().exec();
             deathDetails.state = hosp.state;
+            deathDetails.coordinator = hosp.coordinator;
+            deathDetails.address = hosp.address;
+;
 
             let eligible = req.body.eligible;
             let oga = req.body.organsAvailable;
@@ -92,7 +95,7 @@ router.get("/others", async (req, res) => {
         eligible = eligible.substr(0, eligible.length-1) + "-"
     }
 
-    const allDeaths = await BrainDeath.find({$and: [{state: req.query.state, organsAvailable: req.query.organ}, {eligible: eligible}]}).sort({_id:-1}).populate("hospital").lean().exec();
+    const allDeaths = await BrainDeath.find({$and: [{state: req.query.state, organsAvailable: req.query.organ}, {eligible: eligible}]}).sort({_id:-1}).lean().exec();
     const total_pages = Math.ceil((await BrainDeath.find({$and: [{state: req.query.state, organsAvailable: req.query.organ}, {eligible: eligible}]}).countDocuments().lean().exec() ) / size);
     res.status(200).send({allDeaths, total_pages})
 })
@@ -104,7 +107,7 @@ router.get("/all", async (req, res) => {
     const offset = (page - 1) * size;
     
     try {
-        const allDeaths = await BrainDeath.find().sort({_id:-1}).skip(offset).limit(size).populate("hospital").lean().exec();
+        const allDeaths = await BrainDeath.find().sort({_id:-1}).skip(offset).limit(size).lean().exec();
         const total_pages = Math.ceil((await BrainDeath.find().countDocuments().lean().exec() ) / size);
         res.status(200).send({allDeaths, total_pages})
     } catch(err) {
@@ -119,7 +122,7 @@ router.get("", async (req, res) => {
     const offset = (page - 1) * size;
     
     try {
-        const allDeaths = await BrainDeath.find({$or: [{state: req.query.state}, {organsAvailable: req.query.organ}]}).sort({_id:-1}).skip(offset).limit(size).populate("hospital").lean().exec();
+        const allDeaths = await BrainDeath.find({$or: [{state: req.query.state}, {organsAvailable: req.query.organ}]}).sort({_id:-1}).skip(offset).limit(size).lean().exec();
         const total_pages = Math.ceil((await BrainDeath.find({$or: [{state: req.query.state}, {organsAvailable: req.query.organ}]}).countDocuments().lean().exec() ) / size);
         res.status(200).send({allDeaths, total_pages})
     } catch(err) {

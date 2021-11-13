@@ -19,6 +19,7 @@ export const OrganAvailability = () => {
 
     const getFiltered = async()=>{
         const {data} = await organs.get(`/death/others?state=${st}&organ=${org}&blood=${bld}`)
+        console.log(data)
         setData(data)
     }
 
@@ -97,8 +98,8 @@ export const OrganAvailability = () => {
                     {
                         data.allDeaths.map((ele) => {
                             return (<div className="trow">
-                                <p>{ele.hospital.address}</p>
-                                <p>{ele.hospital.coordinator}</p>
+                                <p>{ele.address}</p>
+                                <p>{ele.coordinator}</p>
                                 <p>{ele.donorName}</p>
                                 <p>{ele.dob}</p>
                                 <p>{ele.deathDate}</p>
