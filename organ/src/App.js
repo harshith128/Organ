@@ -23,7 +23,10 @@ import OTPBox from './components/OtpRegister';
 import {Login_bd} from "./components/Login_bd"
 import {Login_pd} from "./components/Login";
 import {Patient_Second_Page} from "./components/Patient_sec_page"
+import {Edit_patientDetails} from "./components/Edit_patientDetails"
+import{Thanks_bd} from "./components/Thanks_bd"
 
+ import { Report_bd } from './components/Report_bd';
 function App() {
  
   return (
@@ -32,7 +35,9 @@ function App() {
          <Route path="/" exact>
            <Landingpage />
         </Route>
-
+        <Route path="/report" exact>
+           <Report_bd />
+           </Route>
         <Route path="/register" exact>
            <RegisterForm />
            </Route>
@@ -82,6 +87,14 @@ function App() {
         </Route>
         <Route path="/c_p_d" exact>
            <Confirm_Patient_Details />
+        </Route>
+        <Route path="/editDetails" exact>
+           <Edit_patientDetails/>
+
+        </Route>
+        <Route path="/thanks_lastflow" exact>
+           <Thanks_bd/>
+
         </Route>
         </Switch>  
     </div>

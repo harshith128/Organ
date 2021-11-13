@@ -8,13 +8,13 @@ export default function Navbar() {
     
     return (
         <div className={styles.navbar}>
-            <div><Link to={ "/"}>
-                <div className={styles.navbar_logo}>Organ</div>
+            <div><Link to={ "/"}className={styles.navbar_logo}>
+                <div >Organ</div>
             <img className={styles.navbar_plus} src="organlogo.svg" alt="" />
             </Link></div>
             
             <div className={styles.navflex}>
-                <div className={styles.apro}><Link to={"/registration"}>
+                <div ><Link to={"/registration"} className={styles.apro}>
                     Approved Hospitals</Link></div>
                 <div className={styles.wait}>Common Waitlist</div>
                 <div className={styles.org}><Link to={"/organ_availability"}>Organs Availability</Link></div>

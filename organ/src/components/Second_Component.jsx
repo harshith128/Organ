@@ -10,7 +10,7 @@ function Second_Component({user, hospital}){
                         {hospital[0].toUpperCase()}
                     </div>
                     <div>
-                <p id="p">Hospital : { hospital.toUpperCase() }</p>
+                <p id="p"> { hospital.toUpperCase() }</p>
                 <p id="p_id">USERID : { user }</p>
                 </div>
             </div>
