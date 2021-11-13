@@ -16,10 +16,10 @@ router.post("",
     //             console.log(req.body.patientName)
     // }),
 
-    upload.single("certificate"),
+    // upload.single("certificate"),
     async(req, res) => {
         try{
-            console.log({after:req.body})
+            // console.log({after:req.body})
             const errors = validationResult(req);
             // console.log(errors)
             let final_errors = null;
@@ -42,7 +42,7 @@ router.post("",
                 gender: req.body.gender,
                 email: req.body.email,
                 phone: req.body.phone,
-                certificate: req.file.path,
+                // certificate: req.file.path,
                 patientID: nanoid(),
                 organs: req.body.organs
             };
@@ -58,7 +58,8 @@ router.post("",
             })
             console.log({ patientID: details.patientID })
 
-            res.status(201).send({ patient });
+            // res.status(201).send({ patient });
+            res.status(201).send({patientID: patient.patientID})
 
         }catch(err) {
 
