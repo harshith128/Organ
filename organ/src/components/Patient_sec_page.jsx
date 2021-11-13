@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom"
+import Footer from "./footer/Footer";
+import Navbar from "./navbar/Navbar";
 import "./patient_sec_page.css"
 import {Second_Component} from "./Second_Component"
 
 function Patient_Second_Page(){
+    const {user, hospital, token} = JSON.parse(localStorage.getItem("login"));
     return (
         <div>
-        <Second_Component/>
+            <Navbar />
+        <Second_Component user={ user } hospital= { hospital } />
         <br></br>
         <div>
         <div id="second_page_secondbox">
@@ -42,8 +46,7 @@ function Patient_Second_Page(){
            
             </div>
         </div>
-       
-
+        <Footer />
         </div>
 
     )

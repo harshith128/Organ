@@ -51,7 +51,7 @@ function Confirm_BD_Details(){
             if(res.status === 201) {
                 alert("Registered");
                 setBrain(false);
-                // window.location.pathname = "/brain_death";
+                window.location.pathname = "/thanks_P";
             } else {
                 alert(`something went wrong`)
                 // console.log(dt)

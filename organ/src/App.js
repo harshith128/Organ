@@ -9,7 +9,6 @@ import Landingpage from './components/landing/Landingpage';
 import { Second_Page } from './components/Second_page';
 import{Thanks_page} from "./components/Thanks_Hospital"
 import{Thanks_Patient_page } from "./components/Thanks_patient"
-import{Login} from "./components/Login"
 import{Doner_details}from "./components/DonerDetails";
 import { OrganAvailability } from './components/OrganAvailability';
 
@@ -22,6 +21,7 @@ import{Patient_Details} from "./components/Enter_Patient_Details"
 import{Confirm_Patient_Details} from "./components/Confirm_Patient_Details"
 import OTPBox from './components/OtpRegister';
 import {Login_bd} from "./components/Login_bd"
+import {Login_pd} from "./components/Login";
 import {Patient_Second_Page} from "./components/Patient_sec_page"
 
 function App() {
@@ -58,7 +58,7 @@ function App() {
            <Thanks_Patient_page />
         </Route>
         <Route path="/login" exact>
-           <Login />
+           <Login_pd />
            </Route>
            <Route path="/login_brain_death" exact>
            <Login_bd />
