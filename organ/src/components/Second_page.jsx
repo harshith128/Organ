@@ -19,7 +19,7 @@ function Second_Page(){
         <div id="second_page_secondbox">
             <div className="one_bd">
                 <div className="inside_box_bd">
-                   <div className="img_bd"><MySvgFile1/></div>
+                  {/* <div className="img_bd"><MySvgFile1/></div>*/} 
                     {/* <img src={} className="img" alt =""></img> */}
                     <Link to="/add_doner"><p className="inside_box1_bd">Brain Death Registration</p></Link>
                 </div>
@@ -27,7 +27,7 @@ function Second_Page(){
             </div>
             <div  className="two_bd">
                         <div className="inside_box2_bd">
-                             <div className="img_bd"><MySvgFile2/></div>
+                            {/* <div className="img_bd"><MySvgFile2/></div>*/} 
                     {/* <img src="Rectangle 228.svg" alt =""></img> */}
                     <p className="inside_box1_bd">Check Status</p>
                 </div>
@@ -36,7 +36,7 @@ function Second_Page(){
             </div>
             <div className="three_bd">
                         <div className="inside_box_bd">
-                             <div className="img_bd"><MySvgFile1/></div>
+                            {/* <div className="img_bd"><MySvgFile1/></div>*/} 
                     {/* <img src="Rectangle_226.svg" alt =""></img> */}
                     <p className="inside_box1_bd">Update Patient Info</p>
                 </div>
@@ -44,7 +44,7 @@ function Second_Page(){
             </div>
             <div  className="four_bd">
                         <div className="inside_box_bd">
-                             <div className="img_bd"><MySvgFile2/></div>
+                           {/* <div className="img_bd"><MySvgFile2/></div>*/ }  
                     {/* <img src="Rectangle_226.svg" alt =""></img> */}
                     <p className="inside_box1_bd">Update Hospital Info</p>
                 </div>

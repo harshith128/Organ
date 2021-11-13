@@ -145,10 +145,10 @@ border-radius: 8px;
     margin-top: 26px;
 }
 .inside_box_bd{
-    width:46%;
+    width:34%;
     
    min-height: 100%;
-    margin-left: 100px;
+    margin-left: 33%;
     
     margin-right: 100px;
    text-align: center;
@@ -167,10 +167,10 @@ color: #FFFFFF;
 
 }
 .inside_box2_bd{
-    width:48%;
+    width:34%;
     
    min-height: 100%;
-    margin-left: 100px;
+    margin-left: 33%;
     margin-top: 28px;
     
     margin-right: 100px;

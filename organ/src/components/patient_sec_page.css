@@ -90,7 +90,7 @@
     }
     #second_page_secondbox{
         display: grid;
-       margin-top: 18%;
+       margin-top: 5%;
        margin-left: 9%;
        margin-right: 4%;
        
@@ -146,10 +146,10 @@
         margin-top: 10px;
     }
     .inside_box{
-        width:46%;
+        width:36%;
         
        min-height: 100%;
-        margin-left: 100px;
+        margin-left: 32%;
         
         margin-right: 100px;
        text-align: center;
@@ -168,10 +168,10 @@
     
     }
     .inside_box2{
-        width:48%;
+        width:36%;
         
        min-height: 100%;
-        margin-left: 100px;
+        margin-left: 32%;
         margin-top: 28px;
         
         margin-right: 100px;

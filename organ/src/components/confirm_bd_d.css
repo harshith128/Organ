@@ -39,7 +39,8 @@
 .cbdd9{
     display: flex;
     float: left;
-    padding: 1%;
+    padding: 2%;
+    border-radius: 5px;
     margin-left: 8%;
     max-width: 10%;
     max-height: 40px;
@@ -51,7 +52,8 @@
 .cbdd10{
     display: flex;
     float: left;
-    padding: 1%;
+    padding: 2%;
+    border-radius: 5px;
     margin-top: 3%;
     margin-left: 8%;
     max-width: 14%;
