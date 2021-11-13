@@ -43,14 +43,15 @@
 .slide-title{
    position: absolute;
        left: 10%;
-       top: 30%;
+       top: 20%;
    
-
+    margin-top: 0px;
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
     font-size: 26px;
     line-height: 111.3%;
+    max-width: 50%;
     /* identical to box height, or 29px */
 
 
@@ -58,7 +59,7 @@
 }
 .slide-text{
     position: absolute;
-    width: 22%;
+    width:30%;
     height: 66px;
     left: 10%;
     top: 45%;
@@ -68,6 +69,7 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 138.3%;
+    margin-top: 0%;
     /* or 22px */
 
 
@@ -86,7 +88,10 @@
 
 .slide-image {
     position: absolute;
-   width: 20%;
+  min-width:30%;
+  max-width: 30%;
+  min-height: 80%;
+  max-height: 90%;
    height: 17 vw;
    left: 76%;
    top: 10%;
@@ -167,7 +172,7 @@
 }
 .slide-btn button{
     position: absolute;
-    width: 6%;
+   
     height: 1.5 vw;
     /* margin-right: 2%; */
 
@@ -183,6 +188,7 @@
     background-color: #ffffff;
 
     color: #40457A;
+    margin-top: 2.75%;
 }
 .slide-btn1 {
     position: absolute;
