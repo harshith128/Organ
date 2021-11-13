@@ -25,10 +25,11 @@ function Footer() {
                 </div>
                 <div className={styles.footer_sub_grid2}>
                     <div >Official social Media Handles of India.</div>
+                    <br></br>
                     <div className={styles.footer_sub_log}>
-                        <img src="instalogo.png" alt="" />
-                        <img src="facebooklogo.png" alt="" />
-                        <img src="youtubelogo.png" alt=""/>
+                        <img  className="fz1" src="instalogo.png" alt="" />
+                        <img className="fz1" src="facebooklogo.png" alt="" />
+                        <img className="fz1" src="youtubelogo.png" alt=""/>
                     </div>
                 </div>
              </div>

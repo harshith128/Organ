@@ -69,13 +69,9 @@ function Login_bd(){
             <Navbar/>
             <div id="login_main">
             <div className="left_div">
-                <p>Velit tristique duis id nibh nec.</p>
                 <MySvgFile/>
-                <p>
-                Velit tristique duis id nibh nec.
-                Velit tristique duis id nibh nec.
-                Velit tristique duis id nibh nec.
-                </p>
+                <p >
+                It is infinitely better to</p><p> transplant a Heart than to bury it to be </p><p>devoured by worms-Christiaan Barnard.</p>
 
             </div>
             <div className="right_div">
