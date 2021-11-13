@@ -3,8 +3,40 @@ import Footer from './footer/Footer'
 import {Second_Component} from "./Second_Component"
 import { useRef, useState } from "react";
 import "./enter_patient_details.css"
+import { Link } from 'react-router-dom';
+
+
+const object={
+name1:"",
+contact_number:"",
+email:"",
+dob:"",
+blood_group:"",
+gender:"",
+problem:"",
+//  certificate:"",
+heart:"",
+lungs:"",
+kidney:"",
+pancreas:"",
+intestine:"",
+eyeballs:"",
+skin:"",
+bones:"",
+heartvalves:"",
+bloodvesseles:"",
+}
 
 function Patient_Details(){
+    const [formData,setFormData]=useState(object)
+  const handleChange=(e)=>{
+      const {name,value,type,checked}=e.target
+      setFormData({...formData,[name]:(type==="checkbox") ? checked:value})
+  }
+  const handleSubmit=(e)=>{
+      e.preventDefault(formData)
+      console.log("form:",formData)
+  }
     return(
       
         <div>
@@ -52,12 +84,12 @@ function Patient_Details(){
                         </select>
                         <label className="f2">Type of Problem*</label>
                         <br></br>
-                        <input type="text" className="f1" name="problem" />
+                        <input onChange={handleChange} type="text" className="f1" name="problem" />
                         <label className="f2">Portable Blood Group From Doner*</label>
                         <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                         <label className="f2">Upload Medical Certificate*</label>
                         <br></br> <br></br>
-                        <input type="file" className="f3" name=" certificate" />
+                        <input  type="file" className="f3" name="certificate" />
                         
                         </div>
                         <br/> <br/> <br/> <br/>
@@ -70,34 +102,37 @@ function Patient_Details(){
              <br/><br/>
              <p className ="epd2">Selecting Organs</p>
              <br/>
+             <input  onChange={handleChange}  type="checkbox" className="c"name="heart" id="heart" />
              <input type="checkbox" className="c"name="Heart" id="heart" value="checked"/>
              <label for="heart" className="epd1">Heart</label>
-             <input type="checkbox" className="c"name="Lungs" id="lungs" value="checked"/>
-             <label for="heart" className="epd1">Lungs</label>
-             <input type="checkbox" className="c"name="Kidney" id="kidney" value="checked"/>
-             <label for="heart" className="epd1">Kidney</label>
-             <input type="checkbox" className="c"name="Liver" id="Liver" value="checked"/>
-             <label for="heart" className="epd1">Liver</label>
-             <input type="checkbox" className="c"name="Pancreas" id="Pancreas" value="checked"/>
-             <label for="heart" className="epd1">Pancreas</label>
-             <input type="checkbox" className="c"name="Intestine" id="Intestine" value="checked"/>
-             <label for="heart" className="epd1">Intestine</label>
+             <input onChange={handleChange} type="checkbox" className="c"name="lungs" id="lungs"/>
+             <label for="lungs" className="epd1">Lungs</label>
+             <input onChange={handleChange} type="checkbox" className="c"name="kidney" id="kidney"/>
+             <label for="kidney" className="epd1">Kidney</label>
+             <input onChange={handleChange} type="checkbox" className="c"name="liver" id="Liver"/>
+             <label for="Liver" className="epd1">Liver</label>
+             <input  onChange={handleChange} type="checkbox" className="c"name="pancreas" id="Pancreas"/>
+             <label for="Pancreas" className="epd1">Pancreas</label>
+             <input onChange={handleChange} type="checkbox" className="c"name="intestine" id="Intestine"/>
+             <label for="Intestine" className="epd1">Intestine</label>
 
              <br/><br/><br/>
              <p className ="epd2">Selecting Tissues</p>
              <br/>
-             <input type="checkbox" className="c"name="Eyeballs" id="Eyeballs" value="checked"/>
+             <input onChange={handleChange} type="checkbox" className="c"name="eyeballs" id="Eyeballs"/>
              <label for="Eyeballs" className="epd1">Eyeballs</label>
-             <input type="checkbox"  className="c"name="Skin" id="Skin" value="checked"/>
+             <input onChange={handleChange} type="checkbox"  className="c"name="skin" id="Skin"/>
              <label for="heart" className="epd1">Skin</label>
-             <input type="checkbox"  className="c"name="Bones" id="Bones" value="checked"/>
+             <input onChange={handleChange} type="checkbox"  className="c"name="bones" id="Bones"/>
              <label for="heart" className="epd1">Bones</label>
-             <input type="checkbox"  className="c"name="Heartvalves" id="Heartvalves" value="checked"/>
+             <input onChange={handleChange} type="checkbox"  className="c"name="heartvalves" id="Heartvalves"/>
              <label for="heart" className="epd1">Heart Valves</label>
-             <input type="checkbox"  className="c"name="Bloodvesseles" id="Bloodvesseles" value="checked"/>
+             <input onChange={handleChange} type="checkbox"  className="c"name="bloodvesseles" id="Bloodvesseles"/>
              <label for="heart" className="epd1">Blood Vesseles</label>
              <br/><br/><br/>
-             <button className="nsb1" >Submit</button>
+              <button className="nsb1" onClick={handleSubmit} ><Link to={{pathname: '/c_p_d',state: { formData}}}state={formData} style={{textDecoration:"none" , color:" white"}}>Submit</Link></button> 
+
+             {/* <button className="nsb1" onClick={handleSubmit} >Submit</button> */}
             
              
 
