@@ -24,6 +24,7 @@ import OTPBox from './components/OtpRegister';
 import {Login_bd} from "./components/Login_bd"
 import {Patient_Second_Page} from "./components/Patient_sec_page"
 import {Edit_patientDetails} from "./components/Edit_patientDetails"
+import{Thanks_bd} from "./components/Thanks_bd"
 
 function App() {
  
@@ -86,6 +87,10 @@ function App() {
         </Route>
         <Route path="/editDetails" exact>
            <Edit_patientDetails/>
+
+        </Route>
+        <Route path="/thanks_lastflow" exact>
+           <Thanks_bd/>
 
         </Route>
         </Switch>  

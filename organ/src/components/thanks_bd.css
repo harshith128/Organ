@@ -1,0 +1,83 @@
+.thanks_main10{
+    margin-top: 15%;
+    width:60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+   
+}
+.p110{
+    color: #17295E;
+    font-size: 1.875rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+}
+.p210{
+    font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 1.5rem;
+color: #2C3F76;
+
+}
+.p3,.p4{
+    color: #2C3F76;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.875rem;
+   
+}
+.b110{
+   background-color:#17295E;
+   color: white;
+    font-size:  1.625em; 
+    width: 40%;
+    height: 50px;
+    border-radius: 8px;
+}
+.p510{
+    color: #17295E;
+    font-size: 1.25rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+
+}
+.p510:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+body{
+    background-color: #F9FAFF;
+}
+.tbd10{
+    font-size: 1.5rem;
+    color: #ED2025;
+    text-align: center;
+    margin-left: 2%;
+}
+.tbd11{
+    display: flex;
+    text-align: center;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    
+}
+.tbd12{
+    text-align: center;
+    color: #2C3F76;
+    font-size: 1.5rem;
+    
+}
+.tbd13{
+    font-size: 1.25rem;
+    color: #ED2025;
+    text-align: center;
+    margin-left:10%;
+    margin-right:10%
+}
