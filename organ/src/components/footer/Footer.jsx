@@ -24,7 +24,7 @@ function Footer() {
                     <div>Organ Availability</div>
                 </div>
                 <div className={styles.footer_sub_grid2}>
-                    <div >Official social Media Handles of<br></br> TamilnaduTourism.</div>
+                    <div >Official social Media Handles of India.</div>
                     <div className={styles.footer_sub_log}>
                         <img src="instalogo.png" alt="" />
                         <img src="facebooklogo.png" alt="" />

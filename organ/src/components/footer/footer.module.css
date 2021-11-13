@@ -80,6 +80,11 @@ background-color: #091B73;
 
      color: #FFFFFF;
 }
+.footer_sub_log {
+    display: flex;
+}
 .footer_sub_log img{
-    margin-right: 5%;
+    margin-right: 20px;
+    height: 30px;
+    flex-grow: 1;
 }

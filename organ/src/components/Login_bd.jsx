@@ -82,10 +82,10 @@ function Login_bd(){
                 <h2 className="wel">Hi Welcome</h2>
                 <form >
                 <label className="lab">Enter User ID</label>
-                <input type="text"className="input" name="userid" onChange={handleChange} required="true"/>
+                <input type="text"className="input11" name="userid" onChange={handleChange} required="true"/>
                 <br></br> <br></br> 
                 <label className="lab">Password</label>
-                <input type="password" className="input" name="password"  onChange={handleChange} required="true"/>
+                <input type="password" className="input11" name="password"  onChange={handleChange} required="true"/>
                 <p className="forgot">Forgot Password?</p>
                 <br></br><br></br>
                 <input type="checkbox" className="check" />Keep me logged in
