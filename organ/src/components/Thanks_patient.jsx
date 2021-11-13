@@ -14,7 +14,7 @@ function Thanks_Patient_page(){
             <Navbar/>
             <div className="thanks_main">
                 <p className="p1">Thanks for Register with Us!</p>
-                <button className="b1"> Click to Login</button>
+                <button className="b1"> View Report</button>
                 <p className="p5">Back to Login</p>
             </div>
             <Footer/>
