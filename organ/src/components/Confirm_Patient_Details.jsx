@@ -76,9 +76,14 @@ const handleclick1=(e)=>{
                         <br></br>
                         <input type="text" className="cpd001" name="problem" value={data.problem} />
                         <label className="f2">Portable Blood Group From Doner*</label>
-                        <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                        <br></br>
+                        {
+                            data.donor_group.map((e)=>(<p className="cbdd9">{e}</p>))
+                        }
+                          <br></br>  <br></br>  <br></br>  <br></br>  <br></br>  <br></br>  <br></br>  <br></br>  <br></br>
+
                         <label className="f2">Uploaded Medical Certificate*</label>
-                        <br></br> <br></br>
+                        <br></br> 
                         <input type="text" className="cpd001" name=" certificate" value={filedata.name}  />
                         
                         </div>
