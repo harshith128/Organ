@@ -109,3 +109,29 @@
     color: #596896;
     margin-top: 10px;
 }
+
+.eli {
+    margin: auto 40px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 70px 70px 70px 70px;
+}
+
+.eli_p {
+    border: 1px solid #091B73;
+    padding: 12px;
+    margin: 9px;
+    text-align: center;
+    border-radius: 10px;
+    color: #091B73;
+}
+
+.eli_select{
+    border: 1px solid #091B73;
+    padding: 12px;
+    margin: 9px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #091B73 !important;
+    color: #FFFFFF;
+}

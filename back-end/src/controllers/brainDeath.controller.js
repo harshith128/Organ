@@ -10,7 +10,7 @@ const Hospital = require("../models/hospitalRegister.model");
 
 
 router.post("", 
-    upload.single("deathCertificate"),
+    // upload.single("deathCertificate"),
     async(req, res) => {
         try{
             const errors = validationResult(req);
@@ -33,7 +33,7 @@ router.post("",
                 approval: req.body.approval,
                 odCard: req.body.odCard,
                 gender: req.body.gender,
-                deathCertificate: req.file.path,
+                // deathCertificate: req.file.path,
                 cause: req.body.cause,
                 bloodGroup: req.body.bloodGroup,
                 eligible: req.body.eligible,
@@ -41,11 +41,12 @@ router.post("",
                 organsAvailable: req.body.organsAvailable
             };
 
-            let hosp = await Hospital.findById({_id:req.body.hospital}).lean().exec();
+            let hosp = await Hospital.findOne({userID:req.body.hospital}).lean().exec();
             deathDetails.state = hosp.state;
 
             let eligible = req.body.eligible;
             let oga = req.body.organsAvailable;
+            // console.log(hosp)
 
             const brainDeath = await BrainDeath.create(deathDetails);
 

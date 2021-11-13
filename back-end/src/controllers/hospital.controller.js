@@ -64,7 +64,7 @@ router.post("/register",
             html: `<p>OTP ${item.otp}</p>`
         })
 
-        console.log(item)
+        // console.log(item)
         console.log({ OTP: item.otp });
 
         res.status(201).send({token});
@@ -119,7 +119,7 @@ router.post("/login",
 
             const token = newToken(hospital.userID)
 
-            res.status(201).send({id: hospital.userID, token});
+            res.status(201).send({id: hospital.userID, token, hospital:hospital.name});
         } catch(err) {
             return res.status(400).send({ err: err.message })
         }

@@ -16,6 +16,8 @@ const init={
 
 function Organ_Wish_To_Donate(){
 
+    const {user, hospital, token} = JSON.parse(localStorage.getItem("login"));
+
     const location = useLocation()
     console.log("location",location.state)
     const data1=location.state.data;
@@ -35,7 +37,7 @@ function Organ_Wish_To_Donate(){
     return (
         <div>
         <Navbar/>
-        <Second_Component/>
+        <Second_Component user={ user } hospital= { hospital } />
         <br></br>
         <div id="owtdmain">
             <p className="owtdhead">Organ Wish To Donate</p>

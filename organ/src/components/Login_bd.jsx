@@ -39,15 +39,19 @@ function Login_bd(){
                     "Content-Type": "application/json",
                 }
             })
-            const dt = await res.json()
-            console.log(dt)
-            console.log(login)
+            const dt = await res.json();
+            // console.log(login)
             if(res.status === 201) {
-                console.log(dt)
+                const user = (dt.id);
+                const token = (dt.token);
+                const hospital = (dt.hospital);
+                localStorage.setItem("login", JSON.stringify({user:user, hospital:hospital, token:token}));
+                alert("Logged in");
                 setLogin(false);
+                window.location.pathname = "/brain_death";
             } else {
-                alert(`something went wrong ${res.status}`)
-                console.log(dt)
+                alert(`invaid userID or password`)
+                // console.log(dt)
                 setLogin(false);
             }
         }
