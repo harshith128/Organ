@@ -49,7 +49,7 @@ router.post("",
 
             let eligible = req.body.eligible;
             let oga = req.body.organsAvailable;
-            // console.log(hosp)
+            // console.log(deathDetails)
 
             const brainDeath = await BrainDeath.create(deathDetails);
 
@@ -80,6 +80,22 @@ router.post("",
             return res.status(400).send({ err: err.message });
 
         }
+})
+
+router.get("/report", async (req, res) => {
+    const page = +req.query.page || 1;
+    const size = 3;
+    const offset = (page - 1) * size;
+
+    let userID = req.query.userID;
+
+    try {
+        const allDeaths = await BrainDeath.find({hospital:userID}).sort({_id:-1}).skip(offset).limit(size).lean().exec();
+        const total_pages = Math.ceil((await BrainDeath.find({hospital:userID}).countDocuments().lean().exec() ) / size);
+        res.status(200).send({allDeaths, total_pages})
+    } catch(err) {
+        return res.status(400).send({ err: err.message })
+    }
 })
 
 router.get("/others", async (req, res) => {

@@ -14,7 +14,7 @@ const brainDeathSchema = new mongoose.Schema({
     eligible:[{type:String, require:true}],
     organsAvailable:[{type:String, require:true}],
     state:{type:String, require:true},
-    // hopital:{type:String, require:true}
+    hospital:{type:String, require:true},
     coordinator:{type:String, require:true},
     address:{type:String, require:true}
     // hospital:{type:mongoose.Schema.Types.ObjectId, ref:"hospital", required:true}
