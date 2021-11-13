@@ -29,6 +29,7 @@ router.post("/register",
     try {
         const errors = validationResult(req);
         let final_errors = null;
+        console.log(req.body)
         if (!errors.isEmpty()) {
             final_errors = errors.array().map(error => {
                 return {
@@ -63,9 +64,11 @@ router.post("/register",
             html: `<p>OTP ${item.otp}</p>`
         })
 
+        // console.log(item)
         console.log({ OTP: item.otp });
 
         res.status(201).send({token});
+        // res.status(201).send({item})
     } catch(err) {
         return res.status(400).send({ err: err.message })
     }
@@ -75,6 +78,7 @@ router.post("/verify",
     authenticate,
     verifyOTP,
     async(req, res) => {
+        console.log(req.body)
     try {
         let details = req.hospital;
         details.userID = nanoid();
@@ -93,7 +97,7 @@ router.post("/verify",
 
         console.log({ userID: details.userID });
 
-        res.status(201).send({hospital});
+        res.status(201).send({userID:hospital.userID, email:hospital.email});
     } catch(err) {
         return res.status(400).send({ err: err.message })
     }
@@ -103,6 +107,7 @@ router.post("/login",
     async(req, res) => {
         try{
             let hospital = await Hospital.findOne({userID: req.body.userID})
+            // console.log(hospital)
             if(! hospital) {
                 return res.status(400).send({ message: "invalid User ID or Password" })
             }
@@ -114,7 +119,7 @@ router.post("/login",
 
             const token = newToken(hospital.userID)
 
-            res.status(201).send({id: hospital.userID, token});
+            res.status(201).send({id: hospital.userID, token, hospital:hospital.name});
         } catch(err) {
             return res.status(400).send({ err: err.message })
         }

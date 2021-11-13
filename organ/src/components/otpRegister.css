@@ -1,0 +1,57 @@
+.otp-field {
+    width: 25px;
+    margin: 10px 15px;
+    padding: 10px;
+    font-size: 28px;
+    border: 1px solid #2C3F76;
+    border-radius: 8px;
+    color: #2C3F76;
+}
+
+.otp-field:focus {
+    outline: none !important;
+    border: 2px solid #1b306d;
+}
+
+.otp_div {
+    width: fit-content;
+    margin: auto;
+}
+
+.otp_box {
+    width: fit-content;
+    margin: 150px auto 100px;
+    border-radius: 10px;
+    padding: 50px 150px;
+    background-color: #FFFFFF;
+}
+
+.otp_box > h2 {
+    text-align: center;
+    color: #2C3F76;
+}
+
+.otp_box > p {
+    text-align: center;
+    color: #2C3F76;
+}
+
+.btn {
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-left: 20px;
+    color: #FFFFFF;
+    background-color: #2C3F76;
+    border: none;
+}
+
+.btn_dis {
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-left: 20px;
+    color: #FFFFFF;
+    background-color: #69718b;
+    border: none;
+}

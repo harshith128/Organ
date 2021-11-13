@@ -20,10 +20,13 @@ import{HospitalForm} from "./components/HospitalForm";
 import{RegisterForm} from "./components/RegisterForm";
 import{Patient_Details} from "./components/Enter_Patient_Details"
 import{Confirm_Patient_Details} from "./components/Confirm_Patient_Details"
+<<<<<<< HEAD
 import{Edit_patientDetails} from "./components/Edit_patientDetails";
 
+=======
+import OTPBox from './components/OtpRegister';
+>>>>>>> 743e475ed728481f54d587e8991cf39b5ea2d55d
 import {Login_bd} from "./components/Login_bd"
-
 import {Patient_Second_Page} from "./components/Patient_sec_page"
 
 function App() {
@@ -35,13 +38,19 @@ function App() {
            <Landingpage />
         </Route>
 
-        {/* <Route path="/register" exact>
+        <Route path="/register" exact>
            <RegisterForm />
-           </Route> */}
+           </Route>
            <Route path="/hospital" exact>
            <HospitalForm />
            </Route>
+          <Route path="/otp" exact>
+            <OTPBox />
+           </Route>
+        {/* <Route path="/registration" exact> */}
+
         <Route path="/brain_death" exact>
+
            <Second_Page />
            </Route>
            <Route path="/patient" exact>

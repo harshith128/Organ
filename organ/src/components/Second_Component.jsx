@@ -1,17 +1,17 @@
 import "./second_page.css"
 
-function Second_Component(){
+function Second_Component({user, hospital}){
+    // console.log(user, hospital)
     return (
         <div>
-        <div id="second_page_topbox">
+        <div id="second_page_topbox1">
             <div className="sp_div2">
                     <div className="logo">
-                        A
-                        
+                        {hospital[0].toUpperCase()}
                     </div>
                     <div>
-                <p id="p">hospital name</p>
-                <p id="p_id">id</p>
+                <p id="p">Hospital : { hospital.toUpperCase() }</p>
+                <p id="p_id">USERID : { user }</p>
                 </div>
             </div>
             <div className="sp_div3">

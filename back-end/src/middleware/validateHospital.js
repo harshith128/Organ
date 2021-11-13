@@ -85,7 +85,7 @@ const validateRegister = {
     licenceExpDate: {
         notEmpty: true,
         isLength: {
-            options: { min: 7, max: 7},
+            options: { min: 7},
             errorMessage: "invalid date"
         }
     },

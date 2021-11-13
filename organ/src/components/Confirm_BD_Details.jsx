@@ -6,23 +6,70 @@ import "./confirm_bd_d.css"
 import { useLocation } from "react-router";
 import { useState } from 'react/cjs/react.development'
 import {Link} from "react-router-dom";
+import { useEffect } from 'react';
 
 function Confirm_BD_Details(){
+    const {user, hospital, token} = JSON.parse(localStorage.getItem("login"));
+    const [brain, setBrain] = useState(null)
 
     const location = useLocation()
-    console.log("location",location.state)
+    // console.log("location",location.state)
     const data2=location.state.data1
     const file2=location.state.file1
     const organs=location.state.Odata
+
     const handleClick3=()=>{
-        console.log("data:",data2,file2,organs)
+        // console.log("data:",data2,file2,organs)
+        setBrain(true);
     }
+
+    const handleBrainDead = async() => {
+        if(brain === null || ! brain) return;
+        else {
+            const res = await  fetch("http://localhost:2737/death", {
+                method: "POST",
+                body: JSON.stringify({
+                    donorName: data2.name,
+                    deathTime: data2.brain_death_time,
+                    deathDate: data2.brain_death_date,
+                    dob: data2.dob,
+                    approval: data2.f_aprooval==="Yes" ? true : false,
+                    odCard: data2.ODcard==="Yes" ? true : false,
+                    gender: data2.gender,
+                    cause: data2.cause_of_death,
+                    bloodGroup: data2.blood_group,
+                    eligible: data2.eligible_blood_group,
+                    hospital: user,
+                    organsAvailable: ["eye", "heart"]
+                }),
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            })
+            const dt = await res.json();
+            // console.log(dt)
+            if(res.status === 201) {
+                alert("Registered");
+                setBrain(false);
+                // window.location.pathname = "/brain_death";
+            } else {
+                alert(`something went wrong`)
+                // console.log(dt)
+                setBrain(false);
+            }
+        }
+    }
+
+    useEffect(() => {
+        handleBrainDead()
+    }, [brain])
+   
 
 
     return (
         <div>
             <Navbar/>
-        <Second_Component/>
+        <Second_Component user={ user } hospital= { hospital } />
         <br/> 
         <div id="owtdmain">
             <p className="owtdhead">Confirm Entered Details</p>

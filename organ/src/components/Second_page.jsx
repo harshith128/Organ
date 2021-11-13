@@ -7,10 +7,13 @@ import { ReactComponent as MySvgFile1 } from "../components/asset/Rectangle_226.
 import { ReactComponent as MySvgFile2 } from "../components/asset/Report.svg"
 import { Link } from "react-router-dom";
 function Second_Page(){
+    const {user, hospital, token} = JSON.parse(localStorage.getItem("login"));
+    console.log(user, hospital, token)
+    // localStorage.setItem("login", JSON.stringify({user:user, hospital:hospital, token:token}));
     return (
         <div>
             <Navbar/>
-        <Second_Component/>
+        <Second_Component user={ user } hospital= { hospital } />
         <br></br>
         <div>
         <div id="second_page_secondbox">
