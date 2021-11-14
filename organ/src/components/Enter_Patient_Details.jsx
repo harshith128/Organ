@@ -219,7 +219,7 @@ const changeClass = (e) => {
                <button className="nsb1" disabled={formData.blood_group.trim().length<1||formData.name.trim().length<2||
                formData.contact_number.trim().length<10||formData.email.trim().length<4||formData.dob.trim().length<3||
                formData.gender.trim().length<3||formData.problem.trim().length<3||formData.donor_group.length<1
-                ||file===null} onClick={handleSubmit} >Submit</button>  
+                ||file===null||(formData.heart==false&&formData.lungs==false&&formData.kidney==false&&formData.liver==false&&formData.pancreas==false&&formData.intestine==false&&formData.eyeballs==false&&formData.skin==false&&formData.bones==false&&formData.heartvalves==false&&formData.bloodvesseles==false)} onClick={handleSubmit} >Submit</button>  
                 
 
             </div>
