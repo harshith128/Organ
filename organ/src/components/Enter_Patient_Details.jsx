@@ -207,10 +207,15 @@ const changeClass = (e) => {
              <input onChange={handleChange} type="checkbox"  className="c"name="bloodvesseles" id="Bloodvesseles"/>
              <label for="heart" className="epd1">Blood Vesseles</label>
              <br/><br/><br/>
-               <button className="nsb1" onClick={handleSubmit} ><Link to={{pathname: '/c_p_d',state: { formData,file}}}state={formData,file} style={{textDecoration:"none" , color:" white"}}>Submit</Link></button>  
-                {/*
-             <button className="nsb1" onClick={handleSubmit} >Submit</button>
-                */ }
+               <button className="nsb1" disabled={formData.blood_group.trim().length<1||formData.name.trim().length<2||
+               formData.contact_number.trim().length<10||formData.email.trim().length<4||formData.dob.trim().length<3||
+               formData.gender.trim().length<3||formData.problem.trim().length<3||formData.donor_group.length<1
+                ||file===null} onClick={handleSubmit} ><Link to={{pathname: '/c_p_d',state: { formData,file}}}state={formData,file} style={{textDecoration:"none" , color:" white"}}>Submit</Link></button>  
+                
+            {/*} <button className="nsb1" onClick={()=>{
+                 
+             }} >Submit</button>
+            */ }
              
 
 
