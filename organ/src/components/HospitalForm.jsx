@@ -163,7 +163,25 @@ export  function HospitalForm(){
              </div>
 
              {/* <div className="buttonDiv">< div onClick={handleSubmit} className="button" type="submit"><Link to={{pathname: '/register',state: { formData}}}state={formData} style={{textDecoration:"none" , color:" white"}}>Submit</Link></div></div> */}
-             <div className="buttonDiv">< div onClick={handleSubmit} className="button" type="submit">Submit</div></div>
+             <div className="buttonDiv"><button disabled={
+               formData.name.trim().length === 2 ||
+               formData.city.trim().length === 2 ||
+               formData.number.trim().length < 8 ||
+               formData.state.trim().length < 3 ||
+               formData.notto.trim().length < 8 ||
+               formData.telephone.trim().length < 10||
+               formData.date.trim().length < 10 ||
+               formData.website.trim().length < 3||
+               formData.director.trim().length < 2||
+               formData.mail.trim().length < 4||
+               formData.coordinator.trim().length < 2 ||
+               formData.pass.trim().length < 8 ||
+               formData.coordinatorNumber.trim().length < 10||
+               formData.password !== formData.pass || 
+               formData.add.trim().length < 5 || 
+               !(formData.government !== true ^
+               formData.private !== true)
+             } onClick={handleSubmit} className="button" type="submit">Submit</button></div>
              {/* <Link to={{pathname: '/register',state: { formData}}}state={formData} style={{textDecoration:"none" , color:" white"}}><input type="submit"></input></Link> */}
 
              

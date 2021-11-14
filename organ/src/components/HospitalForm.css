@@ -184,14 +184,19 @@ border: 1px solid #91ADFF;
     /* position: absolute; */
 width: 400px;
 height: 70px;
-
+font-size: 24px;
 display: inline-flex;
 color: white;
 justify-content: center;
 align-items: center;
-background: #485271;
+background: #17295E;
 border-radius: 8px;
 margin: auto;
+}
+
+.button:disabled {
+    background-color: #596896;
+    cursor: not-allowed;
 }
 
 
