@@ -41,7 +41,8 @@ router.post("/register",
         }
         let item = req.body;
 
-        item.otp = Math.floor(1000 + Math.random() * 9000);
+        // item.otp = Math.floor(1000 + Math.random() * 9000);
+        item.otp = 1234;
 
         let hospital = await Hospitaltemp.create(item);
         const token = newToken(hospital);
