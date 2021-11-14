@@ -55,3 +55,8 @@
     background-color: #69718b;
     border: none;
 }
+
+.clear {
+    border: none;
+    background: none;
+}

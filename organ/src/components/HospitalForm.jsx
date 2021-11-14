@@ -3,7 +3,7 @@ import { useState } from "react";
 import {Link} from "react-router-dom";
 import Navbar from "./navbar/Navbar";
 import Footer from "./footer/Footer";
-
+import { useHistory } from 'react-router-dom';
 
 
 
@@ -31,7 +31,7 @@ const init={
 
 export  function HospitalForm(){
 
-  
+  const history = useHistory();
   const [formData,setFormData]=useState(init)
   const handleChange=(e)=>{
       const {name,value,type,checked}=e.target
@@ -39,6 +39,10 @@ export  function HospitalForm(){
   }
   const handleSubmit=(e)=>{
       e.preventDefault(formData)
+      history.push({
+        pathname: '/register',
+        state: { formData }
+      })
       console.log("form:",formData)
   }
 
@@ -158,8 +162,8 @@ export  function HospitalForm(){
               
              </div>
 
-             <div className="buttonDiv">< div onClick={handleSubmit} className="button" type="submit"><Link to={{pathname: '/register',state: { formData}}}state={formData} style={{textDecoration:"none" , color:" white"}}>Submit</Link></div></div>
-               
+             {/* <div className="buttonDiv">< div onClick={handleSubmit} className="button" type="submit"><Link to={{pathname: '/register',state: { formData}}}state={formData} style={{textDecoration:"none" , color:" white"}}>Submit</Link></div></div> */}
+             <div className="buttonDiv">< div onClick={handleSubmit} className="button" type="submit">Submit</div></div>
              {/* <Link to={{pathname: '/register',state: { formData}}}state={formData} style={{textDecoration:"none" , color:" white"}}><input type="submit"></input></Link> */}
 
              

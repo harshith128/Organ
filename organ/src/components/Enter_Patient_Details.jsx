@@ -4,7 +4,7 @@ import {Second_Component} from "./Second_Component"
 import { useRef, useState } from "react";
 import "./enter_patient_details.css"
 import { Link } from 'react-router-dom';
-
+import { useHistory } from 'react-router-dom';
 
 const object={
 name:"",
@@ -35,6 +35,7 @@ const eliBol = [false, false, false, false, false, false, false, false];
 function Patient_Details(){
     let ref=useRef(null)
     const [file,setfile]=useState(null)
+    const history = useHistory();
     const handlefileChange=(e)=>{
         const file1=e.target.files[0]
         // console.log( "file1:",file1)
@@ -59,6 +60,10 @@ function Patient_Details(){
   }
   const handleSubmit=(e)=>{
       e.preventDefault(formData)
+      history.push({
+        pathname: '/c_p_d',
+        state: { formData,file }
+      })
       console.log("form:",formData)
       console.log("file:",file)
   }
@@ -134,10 +139,11 @@ const changeClass = (e) => {
                             <option value="O+">O+</option>
                             <option value="O-">O-</option>
                             <option value="A+">A+</option>
-                            <option value="AB+">AB+</option>
                             <option value="A-">A-</option>
+                            <option value="AB+">AB+</option>
                             <option value="AB-">AB-</option>
-                            
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
                         </select>
                         </div>
                         <div>
@@ -207,14 +213,8 @@ const changeClass = (e) => {
              <input onChange={handleChange} type="checkbox"  className="c"name="bloodvesseles" id="Bloodvesseles"/>
              <label for="heart" className="epd1">Blood Vesseles</label>
              <br/><br/><br/>
-               <button className="nsb1" onClick={handleSubmit} ><Link to={{pathname: '/c_p_d',state: { formData,file}}}state={formData,file} style={{textDecoration:"none" , color:" white"}}>Submit</Link></button>  
-                {/*
+               {/* <button className="nsb1" onClick={handleSubmit} ><Link to={{pathname: '/c_p_d',state: { formData,file}}}state={formData,file} style={{textDecoration:"none" , color:" white"}}>Submit</Link></button>   */}
              <button className="nsb1" onClick={handleSubmit} >Submit</button>
-                */ }
-             
-
-
-
 
             </div>
             <div>

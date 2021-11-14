@@ -101,11 +101,6 @@ console.log(tissues)
              <br/><br/>
              <button className="cbddbt1">Register</button>
                 <button className="cbddbt2">Edit</button>
-            
-             
-
-
-
 
             </div>
             <div>

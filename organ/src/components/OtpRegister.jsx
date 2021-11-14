@@ -91,18 +91,20 @@ const OTPBox = () => {
                     </div>
                     <p>OTP Entered - {otp.join("")}</p>
                     <p>
-                        <button disabled={otp.join("").length === 0}
-                            className={otp.join("").length === 0 ? "btn_dis" : "btn"}
-                            onClick={e => setOtp([...otp.map(v => "")])}
-                        >
-                            Clear
-                        </button>
                         <button disabled={otp.join("").length !== 4}
                             className={otp.join("").length !== 4 ? "btn_dis" : "btn"}
                             onClick={ handleVerify
                             }
                         >
                             Verify OTP
+                        </button>
+                    </p>
+                    <p>
+                    <button disabled={otp.join("").length === 0}
+                            className="clear"
+                            onClick={e => setOtp([...otp.map(v => "")])}
+                        >
+                            Clear
                         </button>
                     </p>
                 </div>

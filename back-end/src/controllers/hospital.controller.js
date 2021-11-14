@@ -29,7 +29,7 @@ router.post("/register",
     try {
         const errors = validationResult(req);
         let final_errors = null;
-        console.log(req.body)
+        // console.log(req.body)
         if (!errors.isEmpty()) {
             final_errors = errors.array().map(error => {
                 return {
@@ -106,6 +106,7 @@ router.post("/verify",
 router.post("/login",
     async(req, res) => {
         try{
+            console.log(req.body)
             let hospital = await Hospital.findOne({userID: req.body.userID})
             // console.log(hospital)
             if(! hospital) {

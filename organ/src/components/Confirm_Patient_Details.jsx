@@ -177,7 +177,7 @@ useEffect(() => {
              <br/>
             <div className="showTissues" >
              <div className ="organDiv"> Organs</div>
-             {organs.map(el=><div className="printTissue">{el}</div>)}
+             {[...organs, ...tissues].map(el=><div className="printTissue">{el}</div>)}
              <br/>
              </div>
 
@@ -190,8 +190,8 @@ useEffect(() => {
              <br/><br/>
              <button className="cbddbt1" onClick={handleclick1}>Register</button>
              
-                <button className="cbddbt2"><Link to={{pathname: '/editDetails',state: { data}}}state={data} style={{textDecoration:"none" , color:"#17295E"}}>Edit</Link></button>
-
+                {/* <button className="cbddbt2"><Link to={{pathname: '/editDetails',state: { data}}}state={data} style={{textDecoration:"none" , color:"#17295E"}}>Edit</Link></button> */}
+                <button className="cbddbt2" >Edit</button>
             </div>
             <div>
                 <Footer/>

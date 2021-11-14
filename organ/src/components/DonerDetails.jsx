@@ -133,8 +133,8 @@ function Doner_details(){
                             <option value="O-">O-</option>
                             <option value="A+">A+</option>
                             <option value="A-">A-</option>
-                            <option value="A+">B+</option>
-                            <option value="A-">B-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
                             <option value="AB+">AB+</option>
                             <option value="AB-">AB-</option>
                             

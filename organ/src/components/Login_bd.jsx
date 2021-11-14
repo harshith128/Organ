@@ -91,9 +91,8 @@ function Login_bd(){
                 </form>
                 <button className="login_btn" disabled={data.password.trim().length<8||data.userid.trim().length<6} onClick={handleClick}>Login</button>
                 <div className="last">
-                <p>Don't have an account?</p>
-                <Link to={"/hospital"}><button className="reg_btn" >Register Now</button>
-                 </Link>
+                <p>Don't have an account?  <Link to={"/hospital"}><button className="reg_btn" >Register Now</button>
+                 </Link></p>
                  </div>
 
 

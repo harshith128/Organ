@@ -26,6 +26,7 @@ function Confirm_BD_Details(){
     const handleBrainDead = async() => {
         if(brain === null || ! brain) return;
         else {
+            // console.log(Object.keys(organs))
             const res = await  fetch("http://localhost:2737/death", {
                 method: "POST",
                 body: JSON.stringify({
@@ -40,7 +41,7 @@ function Confirm_BD_Details(){
                     bloodGroup: data2.blood_group,
                     eligible: data2.eligible_blood_group,
                     hospital: user,
-                    organsAvailable: ["eye", "heart"]
+                    organsAvailable: Object.keys(organs)
                 }),
                 headers: {
                     "Content-Type": "application/json",
