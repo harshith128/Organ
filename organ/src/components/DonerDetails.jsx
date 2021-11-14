@@ -1,11 +1,12 @@
 import Navbar from './navbar/Navbar'
-
+import { useHistory } from 'react-router-dom';
 import Footer from './footer/Footer'
 import {Second_Component} from "./Second_Component"
 import "./donerdetails.css"
 import { useRef, useState } from "react";
 import {Progressbar} from "./Progressbar"
 import {Link} from "react-router-dom";
+import { useEffect } from 'react/cjs/react.development';
 
 const init={
     name:"",
@@ -38,6 +39,7 @@ function Doner_details(){
     // console.log(user, hospital, token)
     const [data,setData]=useState(init)
     let ref=useRef(null)
+    const history = useHistory();
     const [file,setfile]=useState(null)
     const{name,dob,blood_group,gender,cause_of_death,brain_death_date,brain_death_time,ODcard,f_aprooval}=data;
 
@@ -99,7 +101,13 @@ function Doner_details(){
         }
     }
     const handleClick=()=>{
-        console.log(data,file)
+        history.push({
+            pathname: '/O_W_T_D',
+            state: { data,file }
+          })
+        // console.log(data,file)
+        // console.log(history)
+        // window.location.pathname = "/O_W_T_D"
     }
     return (
         
@@ -124,8 +132,10 @@ function Doner_details(){
                             <option value="O+">O+</option>
                             <option value="O-">O-</option>
                             <option value="A+">A+</option>
-                            <option value="AB+">AB+</option>
                             <option value="A-">A-</option>
+                            <option value="A+">B+</option>
+                            <option value="A-">B-</option>
+                            <option value="AB+">AB+</option>
                             <option value="AB-">AB-</option>
                             
                         </select>
@@ -193,8 +203,9 @@ function Doner_details(){
             <button className="nsb1" disabled={data.name.trim().length<2||data.dob.trim().length<5||
                 data.blood_group.trim().length<1||data.gender.trim().length<1||data.cause_of_death.trim().length<3||
                 data.brain_death_date.trim().length<5||data.brain_death_time.trim().length<3 || data.eligible_blood_group < 1 ||data.ODcard.trim().length<2||
-                data.f_aprooval.trim().length<1||data.Patient_mobile_number.trim().length!=10||data.email.trim().length<8} onClick={handleClick}>
-                <Link to={{pathname: '/O_W_T_D',state: {data,file}}}state={data,file} style={{textDecoration:"none" , color:" white"}}>Next Step</Link> </button>
+                data.f_aprooval.trim().length<1||data.Patient_mobile_number.trim().length!=10||data.email.trim().length<6} onClick={handleClick}>
+              Next Step </button>
+              {/* <Link to={{pathname: '/O_W_T_D',state: {data,file}}}state={data,file} style={{textDecoration:"none" , color:" white"}}>Next Step</Link></button> */}
             <div>
             <Footer/>
             </div>

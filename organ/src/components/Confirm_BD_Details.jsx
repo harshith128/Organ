@@ -13,7 +13,7 @@ function Confirm_BD_Details(){
     const [brain, setBrain] = useState(null)
 
     const location = useLocation()
-    // console.log("location",location.state)
+    console.log("location",location.state)
     const data2=location.state.data1
     const file2=location.state.file1
     const organs=location.state.Odata

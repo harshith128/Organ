@@ -2,7 +2,7 @@ import Navbar from './navbar/Navbar'
 
 import Footer from './footer/Footer'
 import {Second_Component} from "./Second_Component"
-import { useLocation } from "react-router";
+import { useHistory, useLocation } from "react-router";
 import "./organ_wish_to_donate.css"
 import { useState } from 'react/cjs/react.development'
 import {Link} from "react-router-dom";
@@ -19,6 +19,8 @@ function Organ_Wish_To_Donate(){
     const {user, hospital, token} = JSON.parse(localStorage.getItem("login"));
 
     const location = useLocation()
+    const history = useHistory()
+    console.log({history})
     console.log("location",location.state)
     const data1=location.state.data;
     const file1=location.state.file;
@@ -32,6 +34,10 @@ function Organ_Wish_To_Donate(){
 
     }
     const handleClick1=()=>{
+        history.push({
+            pathname: '/C_BD_D',
+            state: { data1,file1,Odata }
+          })
         console.log("needed data:",data1,file1,Odata)
     }
     return (
@@ -112,7 +118,8 @@ function Organ_Wish_To_Donate(){
 
                         </div>
                         <button className="nsb1" disabled={Odata===undefined} onClick={handleClick1}>
-                        <Link to={{pathname: '/C_BD_D',state: {data1,file1,Odata}}}state={data1,file1,Odata} style={{textDecoration:"none" , color:" white"}}>Next Step</Link></button>
+                            Next Step </button>
+                        {/* <Link to={{pathname: '/C_BD_D',state: {data1,file1,Odata}}}state={data1,file1,Odata} style={{textDecoration:"none" , color:" white"}}>Next Step</Link></button> */}
                         <br/>
             </div>
 

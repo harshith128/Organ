@@ -15,8 +15,8 @@
     font-weight: 600;
     padding-top: 5px;
     text-align: center;
-    
-    
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
 .form_div{
     margin-top: 4%;
@@ -79,7 +79,7 @@
     margin-right: 37%;
     height: 50pt;
     background-color: 
-    #43517B;
+    #17295E;
     color: white;
     font-size: 1.625rem;
     margin-top: 5%;
@@ -91,7 +91,7 @@
 }
 .nsb1:disabled{
     cursor: not-allowed;
-    background-color: #596896;
+    background-color: #5b6a94;
 }
 .f5{
     font-size: 1.25rem;

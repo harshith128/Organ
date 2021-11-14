@@ -6,7 +6,8 @@
     border-radius: 15px;
 }
 #pdhead{
-    background-color:red;
+    /* background-color:red; */
+    background: linear-gradient(104.43deg, #F96977 3.15%, #D85B45 50.29%, #a83c0a 117.72%);
     border-radius: 8px;
     color: white;
     font-size: 1.5rem;
