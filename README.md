@@ -1,6 +1,6 @@
 # Organ
 
-This project is about organ donation.
+Organ+ is an organ donation website for hospitals. The main aim of this project is to notify the registered organ seekers via email, as and when the organ of their requirement matching to their blood group is available and much more. Used React, JavaScript, CSS and Mongodb to build this website.
 
 ## Authors
 
@@ -33,6 +33,8 @@ Clone the project
 
 
 ## Screenshots
+![login_page](https://user-images.githubusercontent.com/88575764/142027843-c014842f-6411-4bd3-a889-d725f2411602.png)
+![page2](https://user-images.githubusercontent.com/88575764/142027991-5b037747-8740-43a8-8d39-277b56c97353.png)
 
 ## Lessons Learned
 
@@ -41,6 +43,6 @@ Clone the project
 
   
 ## Acknowledgements
-
+We would like to thank each and everyone who supported us in building this website. 
 
   
