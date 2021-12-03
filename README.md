@@ -21,7 +21,7 @@ Organ+ is an organ donation website for hospitals. The main aim of this project 
 Clone the project
 
 ```bash
-  git pull https://github.com/harshith128/Organ
+  git pull https://github.com/harshith128/Organ.git
 ```
 - The project will be downloaded
 - Now open "back-end" folder 
